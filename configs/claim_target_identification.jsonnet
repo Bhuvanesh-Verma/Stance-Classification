@@ -45,7 +45,7 @@
     },
   },
   "data_loader": {
-    //"batch_size": 64
+    "shuffle": true,
     "batch_size": 8
   },
   "trainer": {
@@ -53,13 +53,17 @@
         "type": "adam",
         "lr": 0.005
     },
-    //"checkpointer": {
-     //   "num_serialized_models_to_keep": 1,
-   // },
-    "validation_metric": "+span/overall/f1",
+    "validation_metric": "+accuracy",
     "num_epochs": 10,
     "grad_norm": 7.0,
     "patience": 5,
-
+"callbacks": [
+        {
+        "type": "custom_wandb",
+         'entity': std.extVar('WANDB_ENTITY'),
+         'project': std.extVar('WANDB_PROJECT'),
+         'files_to_save': ["config.json", "out.log","metrics.json"]
+         },
+         ],
   }
 }
