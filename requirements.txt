@@ -1,4 +1,4 @@
 
-pandas==1.3
-allennlp==2.8
-allennlp_models==2.8
+pandas==1.3.4
+allennlp==2.5
+allennlp_models==2.5
