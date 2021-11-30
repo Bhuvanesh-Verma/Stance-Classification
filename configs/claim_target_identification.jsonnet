@@ -15,7 +15,7 @@
       },
     },
   "train_data_path": 'Data/train.txt',
-  "test_data_path": 'Data/test.txt',
+  "test_data_path": 'Data/val.txt',
   "model": {
     "type": "crf_tagger",
     "label_encoding": "BIOUL",

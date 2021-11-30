@@ -2,6 +2,8 @@ import argparse
 import json
 import os
 import sys
+import random
+from typing import Optional
 
 import torch
 import logging
@@ -11,7 +13,17 @@ from zipfile import ZipFile
 from urllib.request import urlopen
 
 logger = logging.getLogger(__name__)
-def get_dataset(json_data: str, output_dataset: str):
+
+
+def get_dataset(json_data: Optional[str], output_dataset: str) -> None:
+    """
+    This method creates train, validation and test dataset. It requires a path to store created files. Optionally, you
+    can provide path to local claim_stance_dataset_v1.json file which is contained in original dataset https://research
+    .ibm.com/haifa/dept/vst/files/IBM_Debater_(R)_CS_EACL-2017.v1.zip.
+    :param json_data: local path to claim_stance_dataset_v1.json file
+    :param output_dataset: path to store dataset files
+    :return: None
+    """
 
     if json_data is None:
         logger.log(level=20, msg="Data is being downloaded ...")
@@ -20,10 +32,11 @@ def get_dataset(json_data: str, output_dataset: str):
         file = 'IBM_Debater_(R)_CS_EACL-2017.v1/claim_stance_dataset_v1.json'
         with zipfile.open(file, 'r') as myfile:
             data = myfile.read()
+        zipfile.close()
     else:
         with open(json_data, 'r') as myfile:
             data=myfile.read()
-
+    myfile.close()
     # parse file
     obj = json.loads(data)
 
@@ -38,6 +51,14 @@ def get_dataset(json_data: str, output_dataset: str):
 
     tags = {'train':[], 'test':[]}
     sent_tag = {'train':[], 'test':[]}
+    # Following code block is to get a mask vector for claim sentence, but there are many issues
+    # So what we need to do is, if sentence is : "Banana products are superior than Tamsung." and target is: "Banana
+    # products", then we need a vector [1,1,0,0,0,0]. Note that target can be anywhere in sentence. So issues are
+    # 1. there are some target in dataset where target in sentence ends with comma(,). eg: " bleh bleh Dracula, bleh
+    # bleh", so target for this sentence would be "Dracula" not "Dracula," and current approach cannot tackle this, so
+    # it skips those instances, which leads to data loss.
+    # 2. if I try to remove punctuations then there are some targets which contains punctuations.
+    # If possible we need an efficient way to generate mask for a substring in a string.
     for split, dataset in data.items():
         for sentence, target in dataset:
             tag = torch.zeros(len(sentence.split()))
@@ -55,6 +76,11 @@ def get_dataset(json_data: str, output_dataset: str):
             tags[split].append(tag)
             sent_tag[split].append((sentence.split(),tag))
 
+    random.seed(5)
+    random.shuffle(sent_tag['test'])
+    sent_tag['val'] = []
+    for i in range(300):
+        sent_tag['val'].append(sent_tag['test'].pop())
 
     for split, values in sent_tag.items():
         out_file = os.path.join(output_dataset, split + '.txt')
