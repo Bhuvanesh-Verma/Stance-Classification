@@ -1,0 +1,4 @@
+
+pandas==1.3
+allennlp==2.8
+allennlp_models==2.8
