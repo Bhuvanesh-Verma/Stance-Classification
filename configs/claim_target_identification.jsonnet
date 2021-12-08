@@ -36,7 +36,6 @@
     },
     "encoder": {
         "type": "lstm",
-        //"input_size": 50 + 128,
         "input_size": transformer_hidden_size,
         "hidden_size": 300,
         "num_layers": 2,
