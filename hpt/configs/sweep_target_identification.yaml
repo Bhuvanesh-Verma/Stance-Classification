@@ -6,13 +6,13 @@ command:
   - ${program}
   - "train"
   - "-f"
-  - "configs/claim_target_identification.jsonnet"
+  - "configs/claim_target_identification_bert_base_uncased.jsonnet"
   - "-s"
-  - "experiments/hpt_trial/target"
+  - "experiment/hpt_trial/bert_based_uncased"
   - ${args}
 
 metric:
-  name: training_accuracy
+  name: validation_accuracy
   goal: maximize
 parameters:
 
@@ -32,10 +32,10 @@ parameters:
     max: 10
   trainer.patience:
     min: 3
-    max: 7
+    max: 10
   trainer.num_epochs:
     min: 4
-    max: 15
+    max: 30
   model.encoder.num_layers:
     min: 1
     max: 6

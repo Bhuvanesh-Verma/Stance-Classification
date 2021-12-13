@@ -1,9 +1,9 @@
 
 {
-  local transformer_model = "facebook/bart-base",
-  local transformer_max_length = 1024,
+  local transformer_model = "roberta-large",
+  local transformer_max_length = 514,
   //local transformer_max_length = 128,
-  local transformer_hidden_size = 768,
+  local transformer_hidden_size = 1024,
   "dataset_reader": {
     "type": "sequence_tagging",
     "token_indexers": {
@@ -15,13 +15,13 @@
       },
     },
   "train_data_path": 'Data/train.txt',
-  "validation_data_path": 'Data/val.txt',
+  "test_data_path": 'Data/val.txt',
   "model": {
     "type": "crf_tagger",
     "label_encoding": "BIOUL",
     "constrain_crf_decoding": true,
     "calculate_span_f1": false,
-    "dropout": 0.5,
+    "dropout": 0.25,
     "include_start_end_transitions": false,
     "text_field_embedder": {
       "token_embedders": {
@@ -37,9 +37,9 @@
     "encoder": {
         "type": "lstm",
         "input_size": transformer_hidden_size,
-        "hidden_size": 300,
-        "num_layers": 2,
-        "dropout": 0.4394,
+        "hidden_size": 400,
+        "num_layers": 4,
+        "dropout": 0.6,
         "bidirectional": true
     },
   },
@@ -50,12 +50,12 @@
   "trainer": {
     "optimizer": {
         "type": "adam",
-        "lr": 0.005
+        "lr": 0.0001
     },
     "validation_metric": "+accuracy",
-    "num_epochs": 10,
-    "grad_norm": 7.0,
-    "patience": 5,
+    "num_epochs": 30,
+    "grad_norm": 7.85,
+    "patience": 4,
 "callbacks": [
         {
         "type": "custom_wandb",
