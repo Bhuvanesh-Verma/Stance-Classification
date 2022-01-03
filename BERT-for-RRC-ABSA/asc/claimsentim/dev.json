@@ -1,0 +1,2102 @@
+{
+   "5": {
+      "split": "test",
+      "claims.claimId": 2979,
+      "claims.claimCorrectedText": "No conclusive link was found between video game usage and violent activity",
+      "claims.claimTarget.text": "video game usage",
+      "claims.claimSentiment": 1
+   },
+   "1633": {
+      "split": "test",
+      "claims.claimId": 451976,
+      "claims.claimCorrectedText": "Gaza was blockaded by Israel in response to the rocket and mortar attacks by Hamas and other militant groups operating inside Gaza",
+      "claims.claimTarget.text": "Gaza was blockaded by Israel",
+      "claims.claimSentiment": 1
+   },
+   "1434": {
+      "split": "test",
+      "claims.claimId": 365738,
+      "claims.claimCorrectedText": "wildlife has been negatively affected by the oil sands",
+      "claims.claimTarget.text": "the oil sands",
+      "claims.claimSentiment": -1
+   },
+   "1214": {
+      "split": "test",
+      "claims.claimId": 265638,
+      "claims.claimCorrectedText": "Wind power consumes no fuel and no water",
+      "claims.claimTarget.text": "Wind power",
+      "claims.claimSentiment": 1
+   },
+   "129": {
+      "split": "test",
+      "claims.claimId": 136342,
+      "claims.claimCorrectedText": "only children are spoiled",
+      "claims.claimTarget.text": "only children",
+      "claims.claimSentiment": -1
+   },
+   "839": {
+      "split": "test",
+      "claims.claimId": 199255,
+      "claims.claimCorrectedText": "Unborn children have an inherent right to life",
+      "claims.claimTarget.text": "Unborn children",
+      "claims.claimSentiment": 1
+   },
+   "1010": {
+      "split": "test",
+      "claims.claimId": 211525,
+      "claims.claimCorrectedText": "atheistic arguments must ultimately refute themselves if pressed with rigorous consistency",
+      "claims.claimTarget.text": "atheistic arguments",
+      "claims.claimSentiment": -1
+   },
+   "60": {
+      "split": "test",
+      "claims.claimId": 138719,
+      "claims.claimCorrectedText": "There is no compelling link between violent video games and its effects on children",
+      "claims.claimTarget.text": "violent video games",
+      "claims.claimSentiment": 1
+   },
+   "1223": {
+      "split": "test",
+      "claims.claimId": 265660,
+      "claims.claimCorrectedText": "The use of wind power reduces the necessity for importing electricity from abroad",
+      "claims.claimTarget.text": "The use of wind power",
+      "claims.claimSentiment": 1
+   },
+   "271": {
+      "split": "test",
+      "claims.claimId": 158777,
+      "claims.claimCorrectedText": "Affirmative action programs have at best a negligible impact on the groups they are intended to assist",
+      "claims.claimTarget.text": "Affirmative action programs",
+      "claims.claimSentiment": -1
+   },
+   "494": {
+      "split": "test",
+      "claims.claimId": 115395,
+      "claims.claimCorrectedText": "Monarchy is a check against possible illegal action by politicians",
+      "claims.claimTarget.text": "Monarchy",
+      "claims.claimSentiment": 1
+   },
+   "967": {
+      "split": "test",
+      "claims.claimId": 201572,
+      "claims.claimCorrectedText": "the human race no longer needs religion",
+      "claims.claimTarget.text": "religion",
+      "claims.claimSentiment": -1
+   },
+   "1770": {
+      "split": "test",
+      "claims.claimId": 385021,
+      "claims.claimCorrectedText": "no studies have shown abstinence-only programs to result in delayed intercourse",
+      "claims.claimTarget.text": "abstinence-only programs",
+      "claims.claimSentiment": -1
+   },
+   "1651": {
+      "split": "test",
+      "claims.claimId": 452054,
+      "claims.claimCorrectedText": "Blockades and other forms of economic sanction are permitted in international law",
+      "claims.claimTarget.text": "Blockades and other forms of economic sanction",
+      "claims.claimSentiment": 1
+   },
+   "1637": {
+      "split": "test",
+      "claims.claimId": 451980,
+      "claims.claimCorrectedText": "Humanitarian goods and people must flow in both directions",
+      "claims.claimTarget.text": "None",
+      "claims.claimSentiment": 0
+   },
+   "1615": {
+      "split": "test",
+      "claims.claimId": 447308,
+      "claims.claimCorrectedText": "current Israeli restrictions are counterproductive for Israel's long term security",
+      "claims.claimTarget.text": "current Israeli restrictions",
+      "claims.claimSentiment": -1
+   },
+   "535": {
+      "split": "test",
+      "claims.claimId": 136939,
+      "claims.claimCorrectedText": "the monarchy is inherently contrary to egalitarianism and multiculturalism",
+      "claims.claimTarget.text": "the monarchy",
+      "claims.claimSentiment": -1
+   },
+   "215": {
+      "split": "test",
+      "claims.claimId": 145472,
+      "claims.claimCorrectedText": "Affirmative action discriminates against members of a dominant or majority group",
+      "claims.claimTarget.text": "Affirmative action",
+      "claims.claimSentiment": -1
+   },
+   "341": {
+      "split": "test",
+      "claims.claimId": 184595,
+      "claims.claimCorrectedText": "Diversity is intrinsically valuable to the dominant culture",
+      "claims.claimTarget.text": "Diversity",
+      "claims.claimSentiment": 1
+   },
+   "281": {
+      "split": "test",
+      "claims.claimId": 32022,
+      "claims.claimCorrectedText": "Knocking a person unconscious or even causing concussion may cause permanent brain damage",
+      "claims.claimTarget.text": "Knocking a person unconscious or even causing concussion",
+      "claims.claimSentiment": -1
+   },
+   "372": {
+      "split": "test",
+      "claims.claimId": 187240,
+      "claims.claimCorrectedText": "homogeneity and integration are necessary for a society",
+      "claims.claimTarget.text": "homogeneity and integration",
+      "claims.claimSentiment": 1
+   },
+   "1367": {
+      "split": "test",
+      "claims.claimId": 338976,
+      "claims.claimCorrectedText": "gun possession is a fundamental civil right",
+      "claims.claimTarget.text": "gun possession",
+      "claims.claimSentiment": 1
+   },
+   "817": {
+      "split": "test",
+      "claims.claimId": 199720,
+      "claims.claimCorrectedText": "unionized workers raise their own wages above their natural rate at the expense of their businesses or other workers",
+      "claims.claimTarget.text": "unionized workers",
+      "claims.claimSentiment": -1
+   },
+   "1274": {
+      "split": "test",
+      "claims.claimId": 229205,
+      "claims.claimCorrectedText": "Diverse ecosystems are typically more productive than non-diverse ones",
+      "claims.claimTarget.text": "Diverse ecosystems",
+      "claims.claimSentiment": 1
+   },
+   "301": {
+      "split": "test",
+      "claims.claimId": 148205,
+      "claims.claimCorrectedText": "full-contact sports are barbaric",
+      "claims.claimTarget.text": "full-contact sports",
+      "claims.claimSentiment": -1
+   },
+   "1302": {
+      "split": "test",
+      "claims.claimId": 295061,
+      "claims.claimCorrectedText": "More biologically diverse communities appear to be more productive",
+      "claims.claimTarget.text": "More biologically diverse communities",
+      "claims.claimSentiment": 1
+   },
+   "132": {
+      "split": "test",
+      "claims.claimId": 136345,
+      "claims.claimCorrectedText": "The one child policy has been speculated to be the underlying cause of forced abortions",
+      "claims.claimTarget.text": "The one child policy",
+      "claims.claimSentiment": -1
+   },
+   "201": {
+      "split": "test",
+      "claims.claimId": 23732,
+      "claims.claimCorrectedText": "Affirmative action laws cause disproportionally high costs for small companies and reduce economic growth and employment",
+      "claims.claimTarget.text": "Affirmative action laws",
+      "claims.claimSentiment": -1
+   },
+   "368": {
+      "split": "test",
+      "claims.claimId": 186579,
+      "claims.claimCorrectedText": "people have the right to maintain an affiliation with one's ethnic group",
+      "claims.claimTarget.text": "the right to maintain an affiliation with one's ethnic group",
+      "claims.claimSentiment": 1
+   },
+   "1398": {
+      "split": "test",
+      "claims.claimId": 346758,
+      "claims.claimCorrectedText": "The bribery of government officials may interfere with good government",
+      "claims.claimTarget.text": "The bribery of government officials",
+      "claims.claimSentiment": -1
+   },
+   "25": {
+      "split": "test",
+      "claims.claimId": 3000,
+      "claims.claimCorrectedText": "violent games help students deal with stress and aggression",
+      "claims.claimTarget.text": "violent games",
+      "claims.claimSentiment": 1
+   },
+   "9": {
+      "split": "test",
+      "claims.claimId": 2983,
+      "claims.claimCorrectedText": "exposure to violent video games results in increased physiological arousal, aggression-related thoughts and feelings as well as decreased prosocial behavior",
+      "claims.claimTarget.text": "exposure to violent video games",
+      "claims.claimSentiment": -1
+   },
+   "833": {
+      "split": "test",
+      "claims.claimId": 195742,
+      "claims.claimCorrectedText": "partial-birth abortion .. is .. unnecessary to preserve the health of the mother",
+      "claims.claimTarget.text": "partial-birth abortion",
+      "claims.claimSentiment": -1
+   },
+   "335": {
+      "split": "test",
+      "claims.claimId": 184341,
+      "claims.claimCorrectedText": "Peoples have the right to the dignity and diversity of their cultures",
+      "claims.claimTarget.text": "the right to the dignity and diversity of their cultures",
+      "claims.claimSentiment": 1
+   },
+   "351": {
+      "split": "test",
+      "claims.claimId": 184820,
+      "claims.claimCorrectedText": "multiculturalism works better in theory than in practice",
+      "claims.claimTarget.text": "multiculturalism",
+      "claims.claimSentiment": -1
+   },
+   "16": {
+      "split": "test",
+      "claims.claimId": 2991,
+      "claims.claimCorrectedText": "Reinforcement of sexist stereotypes has been claimed as an effect of violent video games",
+      "claims.claimTarget.text": "violent video games",
+      "claims.claimSentiment": -1
+   },
+   "1409": {
+      "split": "test",
+      "claims.claimId": 362494,
+      "claims.claimCorrectedText": "In some countries the culture of corruption extends to every aspect of public life, making it extremely difficult for individuals to stay in business without resorting to bribes",
+      "claims.claimTarget.text": "the culture of corruption",
+      "claims.claimSentiment": -1
+   },
+   "51": {
+      "split": "test",
+      "claims.claimId": 136190,
+      "claims.claimCorrectedText": "Exposure to violent video games[REF] is related to increased aggressiveness in children",
+      "claims.claimTarget.text": "Exposure to violent video games",
+      "claims.claimSentiment": -1
+   },
+   "1328": {
+      "split": "test",
+      "claims.claimId": 288138,
+      "claims.claimCorrectedText": "austerity measures tend to depress economic growth",
+      "claims.claimTarget.text": "austerity measures",
+      "claims.claimSentiment": -1
+   },
+   "1125": {
+      "split": "test",
+      "claims.claimId": 219780,
+      "claims.claimCorrectedText": "Care work is acknowledged as central to economic development and human well-being",
+      "claims.claimTarget.text": "Care work",
+      "claims.claimSentiment": 1
+   },
+   "1154": {
+      "split": "test",
+      "claims.claimId": 252870,
+      "claims.claimCorrectedText": "A positive correlation between the strengthening of the IP system and subsequent economic growth was found",
+      "claims.claimTarget.text": "the strengthening of the IP system",
+      "claims.claimSentiment": 1
+   },
+   "1378": {
+      "split": "test",
+      "claims.claimId": 338987,
+      "claims.claimCorrectedText": "people who keep a gun at home increase their risk of homicide",
+      "claims.claimTarget.text": "people who keep a gun at home",
+      "claims.claimSentiment": -1
+   },
+   "138": {
+      "split": "test",
+      "claims.claimId": 166869,
+      "claims.claimCorrectedText": "Overpopulation is seen as a serious threat to the quality of human life",
+      "claims.claimTarget.text": "Overpopulation",
+      "claims.claimSentiment": -1
+   },
+   "297": {
+      "split": "test",
+      "claims.claimId": 32083,
+      "claims.claimCorrectedText": "rule changes have made certain kinds of boxing deaths far rarer",
+      "claims.claimTarget.text": "None",
+      "claims.claimSentiment": 0
+   },
+   "1261": {
+      "split": "test",
+      "claims.claimId": 283885,
+      "claims.claimCorrectedText": "Wind farms 'ruin the landscape'",
+      "claims.claimTarget.text": "Wind farms",
+      "claims.claimSentiment": -1
+   },
+   "446": {
+      "split": "test",
+      "claims.claimId": 76041,
+      "claims.claimCorrectedText": "Any form of gambling is susceptible to fraud",
+      "claims.claimTarget.text": "Any form of gambling",
+      "claims.claimSentiment": -1
+   },
+   "1629": {
+      "split": "test",
+      "claims.claimId": 451949,
+      "claims.claimCorrectedText": "The naval blockade's implementation complied with the requirements of international law.",
+      "claims.claimTarget.text": "The naval blockade's implementation",
+      "claims.claimSentiment": 1
+   },
+   "259": {
+      "split": "test",
+      "claims.claimId": 154779,
+      "claims.claimCorrectedText": "Affirmative action may increase racial tension",
+      "claims.claimTarget.text": "Affirmative action",
+      "claims.claimSentiment": -1
+   },
+   "1002": {
+      "split": "test",
+      "claims.claimId": 209989,
+      "claims.claimCorrectedText": "everything in the Universe follows laws, which must have been created by God",
+      "claims.claimTarget.text": "God",
+      "claims.claimSentiment": 1
+   },
+   "1165": {
+      "split": "test",
+      "claims.claimId": 252915,
+      "claims.claimCorrectedText": "prohibiting people from using, reproducing, and trading copyrighted material is an infringement of freedom of speech",
+      "claims.claimTarget.text": "prohibiting people from using, reproducing, and trading copyrighted material",
+      "claims.claimSentiment": -1
+   },
+   "867": {
+      "split": "test",
+      "claims.claimId": 199770,
+      "claims.claimCorrectedText": "as a standard embryo does have a highly valuable future, killing it is seriously wrong",
+      "claims.claimTarget.text": "None",
+      "claims.claimSentiment": 0
+   },
+   "75": {
+      "split": "test",
+      "claims.claimId": 5916,
+      "claims.claimCorrectedText": "The policy is considered as a great success in helping to implement China's current economic growth",
+      "claims.claimTarget.text": "The policy",
+      "claims.claimSentiment": 1
+   },
+   "148": {
+      "split": "test",
+      "claims.claimId": 12925,
+      "claims.claimCorrectedText": "Many sports organizations have banned the use of performance enhancing drugs and have very strict rules and consequences for people who are caught using them",
+      "claims.claimTarget.text": "the use of performance enhancing drugs",
+      "claims.claimSentiment": -1
+   },
+   "244": {
+      "split": "test",
+      "claims.claimId": 154763,
+      "claims.claimCorrectedText": "The impetus towards affirmative action is to redress the disadvantages[REF][REF][REF][REF][REF] associated with overt historical discrimination",
+      "claims.claimTarget.text": "The impetus towards affirmative action",
+      "claims.claimSentiment": 1
+   },
+   "1365": {
+      "split": "test",
+      "claims.claimId": 333704,
+      "claims.claimCorrectedText": "Laws that forbid the carrying of arms serve rather to encourage than to prevent homicides",
+      "claims.claimTarget.text": "Laws that forbid the carrying of arms",
+      "claims.claimSentiment": -1
+   },
+   "1591": {
+      "split": "test",
+      "claims.claimId": 447279,
+      "claims.claimCorrectedText": "The blockade is considered illegal",
+      "claims.claimTarget.text": "The blockade",
+      "claims.claimSentiment": -1
+   },
+   "1621": {
+      "split": "test",
+      "claims.claimId": 451170,
+      "claims.claimCorrectedText": "the \"limited trickle\" of items into Gaza continue the effective collective punishment of the civilian population",
+      "claims.claimTarget.text": "the \"limited trickle\" of items into Gaza",
+      "claims.claimSentiment": -1
+   },
+   "392": {
+      "split": "test",
+      "claims.claimId": 66165,
+      "claims.claimCorrectedText": "Catholic and Jewish traditions have even set aside days for gambling",
+      "claims.claimTarget.text": "gambling",
+      "claims.claimSentiment": 1
+   },
+   "311": {
+      "split": "test",
+      "claims.claimId": 179329,
+      "claims.claimCorrectedText": "Multiculturalism is a perilous concept on which to found policy",
+      "claims.claimTarget.text": "Multiculturalism",
+      "claims.claimSentiment": -1
+   },
+   "923": {
+      "split": "test",
+      "claims.claimId": 198577,
+      "claims.claimCorrectedText": "Safety nets protect households facing hard times from falling into deeper poverty and help them manage risk",
+      "claims.claimTarget.text": "Safety nets",
+      "claims.claimSentiment": 1
+   },
+   "253": {
+      "split": "test",
+      "claims.claimId": 154773,
+      "claims.claimCorrectedText": "affirmative action has undesirable side-effects",
+      "claims.claimTarget.text": "affirmative action",
+      "claims.claimSentiment": -1
+   },
+   "193": {
+      "split": "test",
+      "claims.claimId": 143965,
+      "claims.claimCorrectedText": "many children lead a relatively sedentary lifestyle",
+      "claims.claimTarget.text": "None",
+      "claims.claimSentiment": 0
+   },
+   "1446": {
+      "split": "test",
+      "claims.claimId": 368840,
+      "claims.claimCorrectedText": "there is an extensive overcapacity of oil pipelines from Canada",
+      "claims.claimTarget.text": "oil pipelines from Canada",
+      "claims.claimSentiment": -1
+   },
+   "278": {
+      "split": "test",
+      "claims.claimId": 32019,
+      "claims.claimCorrectedText": "A referee monitors the fight to ensure that competitors use only legal blows",
+      "claims.claimTarget.text": "None",
+      "claims.claimSentiment": 0
+   },
+   "1246": {
+      "split": "test",
+      "claims.claimId": 268073,
+      "claims.claimCorrectedText": "the power output from wind varies",
+      "claims.claimTarget.text": "the power output from wind",
+      "claims.claimSentiment": -1
+   },
+   "185": {
+      "split": "test",
+      "claims.claimId": 136961,
+      "claims.claimCorrectedText": "a lack of physical activity is thought to explain most cases of obesity",
+      "claims.claimTarget.text": "a lack of physical activity",
+      "claims.claimSentiment": -1
+   },
+   "1326": {
+      "split": "test",
+      "claims.claimId": 288136,
+      "claims.claimCorrectedText": "government austerity can result in economic expansion",
+      "claims.claimTarget.text": "government austerity",
+      "claims.claimSentiment": 1
+   },
+   "1382": {
+      "split": "test",
+      "claims.claimId": 339012,
+      "claims.claimCorrectedText": "more guns can reduce crime",
+      "claims.claimTarget.text": "more guns",
+      "claims.claimSentiment": 1
+   },
+   "310": {
+      "split": "test",
+      "claims.claimId": 179328,
+      "claims.claimCorrectedText": "many multicultural societies have failed",
+      "claims.claimTarget.text": "many multicultural societies",
+      "claims.claimSentiment": -1
+   },
+   "1803": {
+      "split": "test",
+      "claims.claimId": 510608,
+      "claims.claimCorrectedText": "such programs verge on religious interference in secular education",
+      "claims.claimTarget.text": "such programs",
+      "claims.claimSentiment": -1
+   },
+   "1834": {
+      "split": "test",
+      "claims.claimId": 534350,
+      "claims.claimCorrectedText": "sexual abstinence confers numerous health benefits",
+      "claims.claimTarget.text": "sexual abstinence",
+      "claims.claimSentiment": 1
+   },
+   "10": {
+      "split": "test",
+      "claims.claimId": 2985,
+      "claims.claimCorrectedText": "No long-term relationship was found between playing violent video game and youth violence or bullying",
+      "claims.claimTarget.text": "playing violent video game",
+      "claims.claimSentiment": 1
+   },
+   "1320": {
+      "split": "test",
+      "claims.claimId": 230449,
+      "claims.claimCorrectedText": "the state should provide citizens their demands in order to achieve people's well-being",
+      "claims.claimTarget.text": "provide citizens their demands",
+      "claims.claimSentiment": 1
+   },
+   "1150": {
+      "split": "test",
+      "claims.claimId": 252866,
+      "claims.claimCorrectedText": "Intellectual property laws give statutory expression to the moral and economic rights of creators in their creations",
+      "claims.claimTarget.text": "Intellectual property laws",
+      "claims.claimSentiment": 1
+   },
+   "266": {
+      "split": "test",
+      "claims.claimId": 157609,
+      "claims.claimCorrectedText": "using quotas displaces individuals that would normally be favored based on their individual achievements",
+      "claims.claimTarget.text": "using quotas",
+      "claims.claimSentiment": -1
+   },
+   "1269": {
+      "split": "test",
+      "claims.claimId": 284441,
+      "claims.claimCorrectedText": "wind power will produce jobs and other forms of economic benefits",
+      "claims.claimTarget.text": "wind power",
+      "claims.claimSentiment": 1
+   },
+   "356": {
+      "split": "test",
+      "claims.claimId": 186021,
+      "claims.claimCorrectedText": "The greater public good warrants eliminating those cultural characteristics that promote conflict or prevent harmony",
+      "claims.claimTarget.text": "those cultural characteristics that promote conflict or prevent harmony",
+      "claims.claimSentiment": -1
+   },
+   "425": {
+      "split": "test",
+      "claims.claimId": 68076,
+      "claims.claimCorrectedText": "Problem gamblers have the erroneous belief that if they keep playing, they will eventually win",
+      "claims.claimTarget.text": "Problem gamblers",
+      "claims.claimSentiment": -1
+   },
+   "1219": {
+      "split": "test",
+      "claims.claimId": 265643,
+      "claims.claimCorrectedText": "Wind turbines may cause physiological problems",
+      "claims.claimTarget.text": "Wind turbines",
+      "claims.claimSentiment": -1
+   },
+   "273": {
+      "split": "test",
+      "claims.claimId": 163904,
+      "claims.claimCorrectedText": "Direct intervention in the distribution of assets and opportunities is needed to resolve the economic disparities",
+      "claims.claimTarget.text": "Direct intervention in the distribution of assets and opportunities",
+      "claims.claimSentiment": 1
+   },
+   "1056": {
+      "split": "test",
+      "claims.claimId": 211648,
+      "claims.claimCorrectedText": "the designer hypothesis immediately raises the larger problem of who designed the designer",
+      "claims.claimTarget.text": "the designer hypothesis",
+      "claims.claimSentiment": -1
+   },
+   "1799": {
+      "split": "test",
+      "claims.claimId": 510604,
+      "claims.claimCorrectedText": "abstinence-only education is ineffective",
+      "claims.claimTarget.text": "abstinence-only education",
+      "claims.claimSentiment": -1
+   },
+   "385": {
+      "split": "test",
+      "claims.claimId": 187443,
+      "claims.claimCorrectedText": "Multiculturalism ultimately erodes the host nations' distinct culture",
+      "claims.claimTarget.text": "Multiculturalism",
+      "claims.claimSentiment": -1
+   },
+   "1753": {
+      "split": "test",
+      "claims.claimId": 514988,
+      "claims.claimCorrectedText": "all over the world there are excellent universities run independently of the state",
+      "claims.claimTarget.text": "universities run independently of the state",
+      "claims.claimSentiment": 1
+   },
+   "15": {
+      "split": "test",
+      "claims.claimId": 2990,
+      "claims.claimCorrectedText": "Biological theories of aggression and violence have specifically excluded video game and other media effects",
+      "claims.claimTarget.text": "video game and other media effects",
+      "claims.claimSentiment": 1
+   },
+   "910": {
+      "split": "test",
+      "claims.claimId": 194637,
+      "claims.claimCorrectedText": "Welfare sustains or even creates poverty",
+      "claims.claimTarget.text": "Welfare",
+      "claims.claimSentiment": -1
+   },
+   "348": {
+      "split": "test",
+      "claims.claimId": 184817,
+      "claims.claimCorrectedText": "the strongest nations are those that are made up of different racial elements",
+      "claims.claimTarget.text": "different racial elements",
+      "claims.claimSentiment": 1
+   },
+   "1393": {
+      "split": "test",
+      "claims.claimId": 231639,
+      "claims.claimCorrectedText": "Corruption and economic crimes undermine the value of democracy",
+      "claims.claimTarget.text": "Corruption and economic crimes",
+      "claims.claimSentiment": -1
+   },
+   "298": {
+      "split": "test",
+      "claims.claimId": 32084,
+      "claims.claimCorrectedText": "boxing remains the 8th most deadly sport",
+      "claims.claimTarget.text": "boxing",
+      "claims.claimSentiment": -1
+   },
+   "949": {
+      "split": "test",
+      "claims.claimId": 201256,
+      "claims.claimCorrectedText": "a certain amount of redistribution would be justified",
+      "claims.claimTarget.text": "a certain amount of redistribution",
+      "claims.claimSentiment": 1
+   },
+   "1754": {
+      "split": "test",
+      "claims.claimId": 514989,
+      "claims.claimCorrectedText": "It is dangerous to have a university funded by private equity",
+      "claims.claimTarget.text": "to have a university funded by private equity",
+      "claims.claimSentiment": -1
+   },
+   "504": {
+      "split": "test",
+      "claims.claimId": 135345,
+      "claims.claimCorrectedText": "monarchy is unfair and elitist",
+      "claims.claimTarget.text": "monarchy",
+      "claims.claimSentiment": -1
+   },
+   "110": {
+      "split": "test",
+      "claims.claimId": 117371,
+      "claims.claimCorrectedText": "overpopulation has been blamed for a variety of issues, including increasing poverty",
+      "claims.claimTarget.text": "overpopulation",
+      "claims.claimSentiment": -1
+   },
+   "1618": {
+      "split": "test",
+      "claims.claimId": 451023,
+      "claims.claimCorrectedText": "The naval blockade was imposed on the Gaza Strip lawfully, with Israel complying with the conditions for imposing it",
+      "claims.claimTarget.text": "The naval blockade",
+      "claims.claimSentiment": 1
+   },
+   "1839": {
+      "split": "test",
+      "claims.claimId": 534357,
+      "claims.claimCorrectedText": "Sex-abstinence programs do not stop risky sexual behavior, or help in the prevention of unwanted pregnancy",
+      "claims.claimTarget.text": "Sex-abstinence programs",
+      "claims.claimSentiment": -1
+   },
+   "872": {
+      "split": "test",
+      "claims.claimId": 199818,
+      "claims.claimCorrectedText": "while the state has an interest in protecting the fetus \"at some point\", this interest cannot override that of the pregnant woman",
+      "claims.claimTarget.text": "protecting the fetus",
+      "claims.claimSentiment": -1
+   },
+   "117": {
+      "split": "test",
+      "claims.claimId": 117378,
+      "claims.claimCorrectedText": "There are a number of problems associated with overpopulation",
+      "claims.claimTarget.text": "overpopulation",
+      "claims.claimSentiment": -1
+   },
+   "1745": {
+      "split": "test",
+      "claims.claimId": 514018,
+      "claims.claimCorrectedText": "private market factors can more efficiently deliver many goods or service than governments",
+      "claims.claimTarget.text": "private market factors",
+      "claims.claimSentiment": 1
+   },
+   "345": {
+      "split": "test",
+      "claims.claimId": 184599,
+      "claims.claimCorrectedText": "Multicultural education in public schools would promote acceptance of diversity",
+      "claims.claimTarget.text": "Multicultural education in public schools",
+      "claims.claimSentiment": 1
+   },
+   "38": {
+      "split": "test",
+      "claims.claimId": 118265,
+      "claims.claimCorrectedText": "media violence may increase aggression",
+      "claims.claimTarget.text": "media violence",
+      "claims.claimSentiment": -1
+   },
+   "1074": {
+      "split": "test",
+      "claims.claimId": 216554,
+      "claims.claimCorrectedText": "the more active elderly people are, the more likely they are to be satisfied with life",
+      "claims.claimTarget.text": "the more active elderly people are",
+      "claims.claimSentiment": 1
+   },
+   "1802": {
+      "split": "test",
+      "claims.claimId": 510607,
+      "claims.claimCorrectedText": "such programs fail to provide adequate information to protect the health of adolescents",
+      "claims.claimTarget.text": "such programs",
+      "claims.claimSentiment": -1
+   },
+   "1092": {
+      "split": "test",
+      "claims.claimId": 215938,
+      "claims.claimCorrectedText": "military service provides job skills",
+      "claims.claimTarget.text": "military service",
+      "claims.claimSentiment": 1
+   },
+   "481": {
+      "split": "test",
+      "claims.claimId": 108452,
+      "claims.claimCorrectedText": "Immigrants damage a sense of community and nationality",
+      "claims.claimTarget.text": "Immigrants",
+      "claims.claimSentiment": -1
+   },
+   "845": {
+      "split": "test",
+      "claims.claimId": 199393,
+      "claims.claimCorrectedText": "whether or not to continue with a pregnancy is an inviolable personal choice",
+      "claims.claimTarget.text": "None",
+      "claims.claimSentiment": 0
+   },
+   "1023": {
+      "split": "test",
+      "claims.claimId": 211538,
+      "claims.claimCorrectedText": "The evidence allegedly proving the existence of God is insufficient",
+      "claims.claimTarget.text": "The evidence allegedly proving the existence of God",
+      "claims.claimSentiment": -1
+   },
+   "985": {
+      "split": "test",
+      "claims.claimId": 205766,
+      "claims.claimCorrectedText": "God must exist to give force to moral obligations",
+      "claims.claimTarget.text": "God",
+      "claims.claimSentiment": 1
+   },
+   "121": {
+      "split": "test",
+      "claims.claimId": 121512,
+      "claims.claimCorrectedText": "Parents have a basic right to decide freely and responsibly on the number and spacing of their children",
+      "claims.claimTarget.text": "to decide freely and responsibly on the number and spacing of their children",
+      "claims.claimSentiment": 1
+   },
+   "1061": {
+      "split": "test",
+      "claims.claimId": 211676,
+      "claims.claimCorrectedText": "The God hypothesis is considered inferior to evolution by natural selection as explanations for the complexity of life",
+      "claims.claimTarget.text": "The God hypothesis",
+      "claims.claimSentiment": -1
+   },
+   "515": {
+      "split": "test",
+      "claims.claimId": 135358,
+      "claims.claimCorrectedText": "A monarchy demands deference",
+      "claims.claimTarget.text": "A monarchy",
+      "claims.claimSentiment": -1
+   },
+   "1024": {
+      "split": "test",
+      "claims.claimId": 211539,
+      "claims.claimCorrectedText": "God's existence \"can be known with certainty from the created world by the natural light of human reason",
+      "claims.claimTarget.text": "God's existence",
+      "claims.claimSentiment": 1
+   },
+   "1226": {
+      "split": "test",
+      "claims.claimId": 265714,
+      "claims.claimCorrectedText": "Wind power has poor capacity contribution",
+      "claims.claimTarget.text": "Wind power",
+      "claims.claimSentiment": -1
+   },
+   "1227": {
+      "split": "test",
+      "claims.claimId": 265995,
+      "claims.claimCorrectedText": "the environmental effects of wind power are relatively minor",
+      "claims.claimTarget.text": "the environmental effects of wind power",
+      "claims.claimSentiment": 1
+   },
+   "332": {
+      "split": "test",
+      "claims.claimId": 182900,
+      "claims.claimCorrectedText": "the multiculturalist policy of freer immigration is unworkable in an era in which the supply of immigrants from third world countries seems limitless",
+      "claims.claimTarget.text": "the multiculturalist policy of freer immigration",
+      "claims.claimSentiment": -1
+   },
+   "516": {
+      "split": "test",
+      "claims.claimId": 135359,
+      "claims.claimCorrectedText": "Monarchy is the enemy of merit and aspiration",
+      "claims.claimTarget.text": "Monarchy",
+      "claims.claimSentiment": -1
+   },
+   "1180": {
+      "split": "test",
+      "claims.claimId": 256569,
+      "claims.claimCorrectedText": "copyright drives the economy by compelling creativity",
+      "claims.claimTarget.text": "copyright",
+      "claims.claimSentiment": 1
+   },
+   "1216": {
+      "split": "test",
+      "claims.claimId": 265640,
+      "claims.claimCorrectedText": "Wind turbines do not consume fuel or produce pollution during normal operation",
+      "claims.claimTarget.text": "Wind turbines",
+      "claims.claimSentiment": 1
+   },
+   "1411": {
+      "split": "test",
+      "claims.claimId": 362508,
+      "claims.claimCorrectedText": "Corruption favors the most connected and unscrupulous, rather than the efficient",
+      "claims.claimTarget.text": "Corruption",
+      "claims.claimSentiment": -1
+   },
+   "1438": {
+      "split": "test",
+      "claims.claimId": 368830,
+      "claims.claimCorrectedText": "the new pipeline has been beset with cost overruns",
+      "claims.claimTarget.text": "the new pipeline",
+      "claims.claimSentiment": -1
+   },
+   "929": {
+      "split": "test",
+      "claims.claimId": 199619,
+      "claims.claimCorrectedText": "economic inequality contributes to crime",
+      "claims.claimTarget.text": "economic inequality",
+      "claims.claimSentiment": -1
+   },
+   "1263": {
+      "split": "test",
+      "claims.claimId": 283945,
+      "claims.claimCorrectedText": "the unpredictable intervals of near-zero output render windpower unsuitable as a base generating capacity",
+      "claims.claimTarget.text": "windpower",
+      "claims.claimSentiment": -1
+   },
+   "1073": {
+      "split": "test",
+      "claims.claimId": 216553,
+      "claims.claimCorrectedText": "Separation of older people from active roles in society benefits both society and older individuals",
+      "claims.claimTarget.text": "Separation of older people from active roles in society",
+      "claims.claimSentiment": 1
+   },
+   "73": {
+      "split": "test",
+      "claims.claimId": 5913,
+      "claims.claimCorrectedText": "The policy is a possible cause behind China's gender imbalance",
+      "claims.claimTarget.text": "The policy",
+      "claims.claimSentiment": -1
+   },
+   "123": {
+      "split": "test",
+      "claims.claimId": 121514,
+      "claims.claimCorrectedText": "governments have a responsibility to meet individuals' reproductive needs",
+      "claims.claimTarget.text": "to meet individuals' reproductive needs",
+      "claims.claimSentiment": 1
+   },
+   "1332": {
+      "split": "test",
+      "claims.claimId": 290811,
+      "claims.claimCorrectedText": "policy makers consistently underestimated the disastrous effects of rigid spending cuts on economic growth",
+      "claims.claimTarget.text": "rigid spending cuts",
+      "claims.claimSentiment": -1
+   },
+   "1661": {
+      "split": "test",
+      "claims.claimId": 452655,
+      "claims.claimCorrectedText": "The blockade is deemed illegal",
+      "claims.claimTarget.text": "The blockade",
+      "claims.claimSentiment": -1
+   },
+   "1793": {
+      "split": "test",
+      "claims.claimId": 510505,
+      "claims.claimCorrectedText": "Abstinence-only programs have not demonstrated successful outcomes",
+      "claims.claimTarget.text": "Abstinence-only programs",
+      "claims.claimSentiment": -1
+   },
+   "1812": {
+      "split": "test",
+      "claims.claimId": 510749,
+      "claims.claimCorrectedText": "Abstinence until marriage is the most effective way to avoid HIV infection",
+      "claims.claimTarget.text": "Abstinence until marriage",
+      "claims.claimSentiment": 1
+   },
+   "434": {
+      "split": "test",
+      "claims.claimId": 69588,
+      "claims.claimCorrectedText": "Internet gambling is a legitimate activity that citizens have the right to engage in",
+      "claims.claimTarget.text": "Internet gambling",
+      "claims.claimSentiment": 1
+   },
+   "1773": {
+      "split": "test",
+      "claims.claimId": 385035,
+      "claims.claimCorrectedText": "educating children about sex can encourage them to engage in it",
+      "claims.claimTarget.text": "educating children about sex",
+      "claims.claimSentiment": -1
+   },
+   "1827": {
+      "split": "test",
+      "claims.claimId": 514964,
+      "claims.claimCorrectedText": "open dialogue about physical intimacy and health education can generate more self-esteem",
+      "claims.claimTarget.text": "open dialogue about physical intimacy and health education",
+      "claims.claimSentiment": 1
+   },
+   "546": {
+      "split": "test",
+      "claims.claimId": 138673,
+      "claims.claimCorrectedText": "a republic is \"inevitable",
+      "claims.claimTarget.text": "a republic",
+      "claims.claimSentiment": 1
+   },
+   "1830": {
+      "split": "test",
+      "claims.claimId": 534317,
+      "claims.claimCorrectedText": "Abstinence-only education programs often provide inaccurate information about contraceptives and sexuality",
+      "claims.claimTarget.text": "Abstinence-only education programs",
+      "claims.claimSentiment": -1
+   },
+   "475": {
+      "split": "test",
+      "claims.claimId": 108369,
+      "claims.claimCorrectedText": "Asylum seekers are motivated by the availability of benefits",
+      "claims.claimTarget.text": "Asylum seekers",
+      "claims.claimSentiment": -1
+   },
+   "1300": {
+      "split": "test",
+      "claims.claimId": 287707,
+      "claims.claimCorrectedText": "Other life-forms warrant our respect, whether or not they are of immediate benefit to us",
+      "claims.claimTarget.text": "Other life-forms",
+      "claims.claimSentiment": 1
+   },
+   "433": {
+      "split": "test",
+      "claims.claimId": 68106,
+      "claims.claimCorrectedText": "Regulation of online gambling is a better alternative than the prohibition of internet gambling",
+      "claims.claimTarget.text": "Regulation of online gambling",
+      "claims.claimSentiment": 1
+   },
+   "1837": {
+      "split": "test",
+      "claims.claimId": 534353,
+      "claims.claimCorrectedText": "excessive repression of the sexual instinct leads to an increase in the overall level of aggression in a given society",
+      "claims.claimTarget.text": "excessive repression of the sexual instinct",
+      "claims.claimSentiment": -1
+   },
+   "1613": {
+      "split": "test",
+      "claims.claimId": 447306,
+      "claims.claimCorrectedText": "the blockade on Gaza is neither sustainable nor tenable in its present form",
+      "claims.claimTarget.text": "the blockade on Gaza",
+      "claims.claimSentiment": -1
+   },
+   "191": {
+      "split": "test",
+      "claims.claimId": 143457,
+      "claims.claimCorrectedText": "school should be made to fit the child, rather than the other way around",
+      "claims.claimTarget.text": "None",
+      "claims.claimSentiment": 0
+   },
+   "27": {
+      "split": "test",
+      "claims.claimId": 3002,
+      "claims.claimCorrectedText": "many skills can be learned from the gaming experience, it builds practical and intellectual skills",
+      "claims.claimTarget.text": "the gaming experience",
+      "claims.claimSentiment": 1
+   },
+   "112": {
+      "split": "test",
+      "claims.claimId": 117373,
+      "claims.claimCorrectedText": "economists doubt that a correlation between population reduction and economic growth exists",
+      "claims.claimTarget.text": "population reduction",
+      "claims.claimSentiment": -1
+   },
+   "934": {
+      "split": "test",
+      "claims.claimId": 199624,
+      "claims.claimCorrectedText": "there is no encouragement of those receiving aid to resume working",
+      "claims.claimTarget.text": "those receiving aid",
+      "claims.claimSentiment": -1
+   },
+   "868": {
+      "split": "test",
+      "claims.claimId": 199771,
+      "claims.claimCorrectedText": "deliberate abortions are seriously immoral",
+      "claims.claimTarget.text": "deliberate abortions",
+      "claims.claimSentiment": -1
+   },
+   "959": {
+      "split": "test",
+      "claims.claimId": 199984,
+      "claims.claimCorrectedText": "atheism systematically influences people to do bad things",
+      "claims.claimTarget.text": "atheism",
+      "claims.claimSentiment": -1
+   },
+   "1370": {
+      "split": "test",
+      "claims.claimId": 338979,
+      "claims.claimCorrectedText": "an armed citizenry is the population's last line of defense against tyranny by their own government",
+      "claims.claimTarget.text": "an armed citizenry",
+      "claims.claimSentiment": 1
+   },
+   "272": {
+      "split": "test",
+      "claims.claimId": 158778,
+      "claims.claimCorrectedText": "Preference policies reduce the incentives of both the preferred and non-preferred to perform at their best",
+      "claims.claimTarget.text": "Preference policies",
+      "claims.claimSentiment": -1
+   },
+   "156": {
+      "split": "test",
+      "claims.claimId": 117170,
+      "claims.claimCorrectedText": "Substance abuse can be harmful to your health and may even be deadly in certain scenarios",
+      "claims.claimTarget.text": "Substance abuse",
+      "claims.claimSentiment": -1
+   },
+   "882": {
+      "split": "test",
+      "claims.claimId": 200451,
+      "claims.claimCorrectedText": "D&X abortions are never medically necessary",
+      "claims.claimTarget.text": "D&X abortions",
+      "claims.claimSentiment": -1
+   },
+   "1360": {
+      "split": "test",
+      "claims.claimId": 333667,
+      "claims.claimCorrectedText": "gun possession is a civil right",
+      "claims.claimTarget.text": "gun possession",
+      "claims.claimSentiment": 1
+   },
+   "1820": {
+      "split": "test",
+      "claims.claimId": 514950,
+      "claims.claimCorrectedText": "sex education is necessary to prepare the young for the task ahead",
+      "claims.claimTarget.text": "sex education",
+      "claims.claimSentiment": 1
+   },
+   "855": {
+      "split": "test",
+      "claims.claimId": 199522,
+      "claims.claimCorrectedText": "any decision should be left up to the woman within whose body the fetus is growing",
+      "claims.claimTarget.text": "None",
+      "claims.claimSentiment": 0
+   },
+   "1268": {
+      "split": "test",
+      "claims.claimId": 284439,
+      "claims.claimCorrectedText": "wind power can improve energy security",
+      "claims.claimTarget.text": "wind power",
+      "claims.claimSentiment": 1
+   },
+   "184": {
+      "split": "test",
+      "claims.claimId": 134831,
+      "claims.claimCorrectedText": "To stay healthy it is important to engage in physical activity",
+      "claims.claimTarget.text": "physical activity",
+      "claims.claimSentiment": 1
+   },
+   "1034": {
+      "split": "test",
+      "claims.claimId": 211566,
+      "claims.claimCorrectedText": "Atheism is life-affirming in a way that religion can never be",
+      "claims.claimTarget.text": "Atheism",
+      "claims.claimSentiment": 1
+   },
+   "1294": {
+      "split": "test",
+      "claims.claimId": 283902,
+      "claims.claimCorrectedText": "Research on natural processes can only occur if habitat is preserved and organisms continue to thrive",
+      "claims.claimTarget.text": "habitat is preserved and organisms continue to thrive",
+      "claims.claimSentiment": 1
+   },
+   "832": {
+      "split": "test",
+      "claims.claimId": 192518,
+      "claims.claimCorrectedText": "Intact dilation and extraction  is never needed to protect the health of a pregnant woman",
+      "claims.claimTarget.text": "Intact dilation and extraction",
+      "claims.claimSentiment": -1
+   },
+   "1372": {
+      "split": "test",
+      "claims.claimId": 338981,
+      "claims.claimCorrectedText": "a well-armed citizenry prevents crime",
+      "claims.claimTarget.text": "a well-armed citizenry",
+      "claims.claimSentiment": 1
+   },
+   "1234": {
+      "split": "test",
+      "claims.claimId": 266499,
+      "claims.claimCorrectedText": "Wind power is a proven and reliable technology",
+      "claims.claimTarget.text": "Wind power",
+      "claims.claimSentiment": 1
+   },
+   "958": {
+      "split": "test",
+      "claims.claimId": 199983,
+      "claims.claimCorrectedText": "Atheism has been criticized as a faith in itself",
+      "claims.claimTarget.text": "Atheism",
+      "claims.claimSentiment": -1
+   },
+   "408": {
+      "split": "test",
+      "claims.claimId": 66200,
+      "claims.claimCorrectedText": "Given the large amounts of currency handled within a casino, both patrons and staff may be tempted to cheat and steal",
+      "claims.claimTarget.text": "the large amounts of currency handled within a casino",
+      "claims.claimSentiment": -1
+   },
+   "1603": {
+      "split": "test",
+      "claims.claimId": 447294,
+      "claims.claimCorrectedText": "The blockade constitutes collective punishment under international law",
+      "claims.claimTarget.text": "The blockade",
+      "claims.claimSentiment": -1
+   },
+   "1287": {
+      "split": "test",
+      "claims.claimId": 281446,
+      "claims.claimCorrectedText": "nature has an intrinsic value",
+      "claims.claimTarget.text": "nature",
+      "claims.claimSentiment": 1
+   },
+   "111": {
+      "split": "test",
+      "claims.claimId": 117372,
+      "claims.claimCorrectedText": "reduction of the population is a key to economic growth",
+      "claims.claimTarget.text": "reduction of the population",
+      "claims.claimSentiment": 1
+   },
+   "1648": {
+      "split": "test",
+      "claims.claimId": 452051,
+      "claims.claimCorrectedText": "The Gaza blockade was called collective punishment in contravention of international humanitarian law",
+      "claims.claimTarget.text": "The Gaza blockade",
+      "claims.claimSentiment": -1
+   },
+   "1120": {
+      "split": "test",
+      "claims.claimId": 224627,
+      "claims.claimCorrectedText": "the draft is fundamentally unfair",
+      "claims.claimTarget.text": "the draft",
+      "claims.claimSentiment": -1
+   },
+   "451": {
+      "split": "test",
+      "claims.claimId": 91927,
+      "claims.claimCorrectedText": "immigrants have high rates of criminality",
+      "claims.claimTarget.text": "immigrants",
+      "claims.claimSentiment": -1
+   },
+   "1135": {
+      "split": "test",
+      "claims.claimId": 228017,
+      "claims.claimCorrectedText": "property rights encourage their holders to develop the property",
+      "claims.claimTarget.text": "property rights",
+      "claims.claimSentiment": 1
+   },
+   "54": {
+      "split": "test",
+      "claims.claimId": 136231,
+      "claims.claimCorrectedText": "A correlation between violent content conveyed through media (including videogames) and violent or aggressive behavior has been shown",
+      "claims.claimTarget.text": "violent content conveyed through media (including videogames)",
+      "claims.claimSentiment": -1
+   },
+   "118": {
+      "split": "test",
+      "claims.claimId": 117379,
+      "claims.claimCorrectedText": "The success of the policy has been questioned, and reduction in fertility has also been attributed to the modernization of China",
+      "claims.claimTarget.text": "The success of the policy",
+      "claims.claimSentiment": -1
+   },
+   "1008": {
+      "split": "test",
+      "claims.claimId": 211523,
+      "claims.claimCorrectedText": "basic facts, such as humanity's existence, are best explained by the existence of God",
+      "claims.claimTarget.text": "the existence of God",
+      "claims.claimSentiment": 1
+   },
+   "1184": {
+      "split": "test",
+      "claims.claimId": 257421,
+      "claims.claimCorrectedText": "Patents are obstructing research",
+      "claims.claimTarget.text": "Patents",
+      "claims.claimSentiment": -1
+   },
+   "227": {
+      "split": "test",
+      "claims.claimId": 152196,
+      "claims.claimCorrectedText": "members of minorities require specific provisions and rights to ensure that they are not marginalised within society",
+      "claims.claimTarget.text": "None",
+      "claims.claimSentiment": 0
+   },
+   "487": {
+      "split": "test",
+      "claims.claimId": 114502,
+      "claims.claimCorrectedText": "The monarch serves as a ceremonial figurehead symbol of national unity and state continuity",
+      "claims.claimTarget.text": "The monarch",
+      "claims.claimSentiment": 1
+   },
+   "1626": {
+      "split": "test",
+      "claims.claimId": 451946,
+      "claims.claimCorrectedText": "Israel's blockade of the Gaza Strip was described as totally intolerable and unacceptable in the 21st century",
+      "claims.claimTarget.text": "Israel's blockade of the Gaza Strip",
+      "claims.claimSentiment": -1
+   },
+   "527": {
+      "split": "test",
+      "claims.claimId": 135373,
+      "claims.claimCorrectedText": "Monarchy provides an impartial arbiter",
+      "claims.claimTarget.text": "Monarchy",
+      "claims.claimSentiment": 1
+   },
+   "819": {
+      "split": "test",
+      "claims.claimId": 199722,
+      "claims.claimCorrectedText": "unionized workers will spend their higher wages, driving economic growth and creating new jobs",
+      "claims.claimTarget.text": "unionized workers",
+      "claims.claimSentiment": 1
+   },
+   "1026": {
+      "split": "test",
+      "claims.claimId": 211541,
+      "claims.claimCorrectedText": "all human experience and action (even the condition of unbelief, itself) is a proof for the existence of God",
+      "claims.claimTarget.text": "the existence of God",
+      "claims.claimSentiment": 1
+   },
+   "1159": {
+      "split": "test",
+      "claims.claimId": 252875,
+      "claims.claimCorrectedText": "Allowing property rights in ideas and information infringes on the right to own tangible property",
+      "claims.claimTarget.text": "Allowing property rights in ideas and information",
+      "claims.claimSentiment": -1
+   },
+   "1012": {
+      "split": "test",
+      "claims.claimId": 211527,
+      "claims.claimCorrectedText": "when a person's understanding ponders over the existence of God it encounters nothing but contradictions",
+      "claims.claimTarget.text": "the existence of God",
+      "claims.claimSentiment": -1
+   },
+   "1031": {
+      "split": "test",
+      "claims.claimId": 211563,
+      "claims.claimCorrectedText": "humanity would be better off without religion or belief in God",
+      "claims.claimTarget.text": "religion or belief in God",
+      "claims.claimSentiment": -1
+   },
+   "1350": {
+      "split": "test",
+      "claims.claimId": 332311,
+      "claims.claimCorrectedText": "guns are needed for personal security",
+      "claims.claimTarget.text": "guns",
+      "claims.claimSentiment": 1
+   },
+   "90": {
+      "split": "test",
+      "claims.claimId": 94252,
+      "claims.claimCorrectedText": "a single child would be left with having to provide support for his or her two parents and four grandparents",
+      "claims.claimTarget.text": "a single child",
+      "claims.claimSentiment": -1
+   },
+   "403": {
+      "split": "test",
+      "claims.claimId": 66178,
+      "claims.claimCorrectedText": "gamblers persist in gambling even after repeated losses",
+      "claims.claimTarget.text": "gamblers",
+      "claims.claimSentiment": -1
+   },
+   "1050": {
+      "split": "test",
+      "claims.claimId": 211617,
+      "claims.claimCorrectedText": "religion is a positive civilizing influence on society",
+      "claims.claimTarget.text": "religion",
+      "claims.claimSentiment": 1
+   },
+   "1248": {
+      "split": "test",
+      "claims.claimId": 268075,
+      "claims.claimCorrectedText": "wind must be backed by an equal amount of \"back-up capacity",
+      "claims.claimTarget.text": "wind",
+      "claims.claimSentiment": -1
+   },
+   "432": {
+      "split": "test",
+      "claims.claimId": 68105,
+      "claims.claimCorrectedText": "Internet gambling is a growing problem for banks and credit card companies",
+      "claims.claimTarget.text": "Internet gambling",
+      "claims.claimSentiment": -1
+   },
+   "1599": {
+      "split": "test",
+      "claims.claimId": 447289,
+      "claims.claimCorrectedText": "Israel \"could not lift the embargo altogether as long as Hamas remains in control\" of Gaza",
+      "claims.claimTarget.text": "lift the embargo altogether",
+      "claims.claimSentiment": -1
+   },
+   "274": {
+      "split": "test",
+      "claims.claimId": 183731,
+      "claims.claimCorrectedText": "Affirmative action is designed to improve the well being of perceived backward and under represented communities",
+      "claims.claimTarget.text": "Affirmative action",
+      "claims.claimSentiment": 1
+   },
+   "1755": {
+      "split": "test",
+      "claims.claimId": 516247,
+      "claims.claimCorrectedText": "if universities are \"to nurture genuinely free and creative academic research\" and \"be the guardians of liberty which a free society needs\" they must be independent of government funding",
+      "claims.claimTarget.text": "independent of government funding",
+      "claims.claimSentiment": 1
+   },
+   "1324": {
+      "split": "test",
+      "claims.claimId": 287646,
+      "claims.claimCorrectedText": "austerity simply depresses economic growth",
+      "claims.claimTarget.text": "austerity",
+      "claims.claimSentiment": -1
+   },
+   "442": {
+      "split": "test",
+      "claims.claimId": 76035,
+      "claims.claimCorrectedText": "There can be some problems associated with winning a lottery jackpot",
+      "claims.claimTarget.text": "winning a lottery jackpot",
+      "claims.claimSentiment": -1
+   },
+   "334": {
+      "split": "test",
+      "claims.claimId": 183697,
+      "claims.claimCorrectedText": "multinationality in a single state should necessarily comprise the right to express and exercise national identity even by minorities",
+      "claims.claimTarget.text": "the right to express and exercise national identity even by minorities",
+      "claims.claimSentiment": 1
+   },
+   "963": {
+      "split": "test",
+      "claims.claimId": 200792,
+      "claims.claimCorrectedText": "An omniscient, wholly good being would prevent the occurrence of any intense suffering",
+      "claims.claimTarget.text": "An omniscient, wholly good being",
+      "claims.claimSentiment": -1
+   },
+   "393": {
+      "split": "test",
+      "claims.claimId": 66166,
+      "claims.claimCorrectedText": "religious authorities generally disapprove of gambling",
+      "claims.claimTarget.text": "gambling",
+      "claims.claimSentiment": -1
+   },
+   "865": {
+      "split": "test",
+      "claims.claimId": 199768,
+      "claims.claimCorrectedText": "the right to life begins at conception",
+      "claims.claimTarget.text": "None",
+      "claims.claimSentiment": 0
+   },
+   "1160": {
+      "split": "test",
+      "claims.claimId": 252910,
+      "claims.claimCorrectedText": "Patents and copyrights are the legal implementation of the base of all property rights: a man's right to the product of his mind",
+      "claims.claimTarget.text": "Patents and copyrights",
+      "claims.claimSentiment": 1
+   },
+   "472": {
+      "split": "test",
+      "claims.claimId": 108266,
+      "claims.claimCorrectedText": "Refugee populations consist of people who are terrified and are away from familiar surroundings",
+      "claims.claimTarget.text": "Refugee populations",
+      "claims.claimSentiment": 1
+   },
+   "32": {
+      "split": "test",
+      "claims.claimId": 95661,
+      "claims.claimCorrectedText": "Various games are accused of causing addiction and even violent behavior",
+      "claims.claimTarget.text": "Various games",
+      "claims.claimSentiment": -1
+   },
+   "57": {
+      "split": "test",
+      "claims.claimId": 138716,
+      "claims.claimCorrectedText": "There is a connection between video games and violence",
+      "claims.claimTarget.text": "video games",
+      "claims.claimSentiment": -1
+   },
+   "71": {
+      "split": "test",
+      "claims.claimId": 143113,
+      "claims.claimCorrectedText": "There are tangible benefits to violence in games",
+      "claims.claimTarget.text": "violence in games",
+      "claims.claimSentiment": 1
+   },
+   "500": {
+      "split": "test",
+      "claims.claimId": 133773,
+      "claims.claimCorrectedText": "the monarchy is an outdated and regressive institution",
+      "claims.claimTarget.text": "the monarchy",
+      "claims.claimSentiment": -1
+   },
+   "1634": {
+      "split": "test",
+      "claims.claimId": 451977,
+      "claims.claimCorrectedText": "The blockade is harming the Gazan economy",
+      "claims.claimTarget.text": "The blockade",
+      "claims.claimSentiment": -1
+   },
+   "1395": {
+      "split": "test",
+      "claims.claimId": 346755,
+      "claims.claimCorrectedText": "Expectations of when a monetary transaction is appropriate can differ from place to place",
+      "claims.claimTarget.text": "None",
+      "claims.claimSentiment": 0
+   },
+   "1359": {
+      "split": "test",
+      "claims.claimId": 333666,
+      "claims.claimCorrectedText": "Gun ownership is seen as a civil right",
+      "claims.claimTarget.text": "Gun ownership",
+      "claims.claimSentiment": 1
+   },
+   "299": {
+      "split": "test",
+      "claims.claimId": 148162,
+      "claims.claimCorrectedText": "Sports related to combat skills have been a part of human culture for thousands of years",
+      "claims.claimTarget.text": "Sports related to combat skills",
+      "claims.claimSentiment": 1
+   },
+   "1043": {
+      "split": "test",
+      "claims.claimId": 211608,
+      "claims.claimCorrectedText": "theist religions and their holy books are not divinely inspired, but instead are fabrications of non-divine human individuals",
+      "claims.claimTarget.text": "theist religions and their holy books",
+      "claims.claimSentiment": -1
+   },
+   "1284": {
+      "split": "test",
+      "claims.claimId": 231510,
+      "claims.claimCorrectedText": "People who live close to nature can be dependent on the survival of all the species in their environment",
+      "claims.claimTarget.text": "the survival of all the species in their environment",
+      "claims.claimSentiment": 1
+   },
+   "1244": {
+      "split": "test",
+      "claims.claimId": 268071,
+      "claims.claimCorrectedText": "Wind power is \"highly non-dispatchable",
+      "claims.claimTarget.text": "Wind power",
+      "claims.claimSentiment": -1
+   },
+   "1749": {
+      "split": "test",
+      "claims.claimId": 514022,
+      "claims.claimCorrectedText": "certain public goods and services should remain primarily in the hands of government in order to ensure that everyone in society has access to them",
+      "claims.claimTarget.text": "remain primarily in the hands of government",
+      "claims.claimSentiment": 1
+   },
+   "1439": {
+      "split": "test",
+      "claims.claimId": 368831,
+      "claims.claimCorrectedText": "The pipeline's permit was based on a deficient environmental impact statement",
+      "claims.claimTarget.text": "The pipeline's permit",
+      "claims.claimSentiment": -1
+   },
+   "134": {
+      "split": "test",
+      "claims.claimId": 136347,
+      "claims.claimCorrectedText": "only children are higher in achievement motivation",
+      "claims.claimTarget.text": "only children",
+      "claims.claimSentiment": 1
+   },
+   "1041": {
+      "split": "test",
+      "claims.claimId": 211606,
+      "claims.claimCorrectedText": "Religions teachings are outdated in comparison with modern Western morals",
+      "claims.claimTarget.text": "Religions teachings",
+      "claims.claimSentiment": -1
+   },
+   "344": {
+      "split": "test",
+      "claims.claimId": 184598,
+      "claims.claimCorrectedText": "Multiculturalism is a developmental journey through which an individual enhances knowledge and skills about different cultures",
+      "claims.claimTarget.text": "Multiculturalism",
+      "claims.claimSentiment": 1
+   },
+   "1048": {
+      "split": "test",
+      "claims.claimId": 211615,
+      "claims.claimCorrectedText": "atheism was responsible for \"some 20th century atrocities",
+      "claims.claimTarget.text": "atheism",
+      "claims.claimSentiment": -1
+   },
+   "1828": {
+      "split": "test",
+      "claims.claimId": 514965,
+      "claims.claimCorrectedText": "sexual behavior outside of marriage is immoral",
+      "claims.claimTarget.text": "sexual behavior outside of marriage",
+      "claims.claimSentiment": -1
+   },
+   "1260": {
+      "split": "test",
+      "claims.claimId": 283881,
+      "claims.claimCorrectedText": "The presence of wind energy can reduce costs for consumers",
+      "claims.claimTarget.text": "The presence of wind energy",
+      "claims.claimSentiment": 1
+   },
+   "492": {
+      "split": "test",
+      "claims.claimId": 115393,
+      "claims.claimCorrectedText": "A monarch serves the traditional role of embodying and representing the nation",
+      "claims.claimTarget.text": "A monarch",
+      "claims.claimSentiment": 1
+   },
+   "358": {
+      "split": "test",
+      "claims.claimId": 186303,
+      "claims.claimCorrectedText": "A community of separate cultures is divisive",
+      "claims.claimTarget.text": "A community of separate cultures",
+      "claims.claimSentiment": -1
+   },
+   "454": {
+      "split": "test",
+      "claims.claimId": 101427,
+      "claims.claimCorrectedText": "freedom of movement is often recognized as a civil right",
+      "claims.claimTarget.text": "freedom of movement",
+      "claims.claimSentiment": 1
+   },
+   "340": {
+      "split": "test",
+      "claims.claimId": 184594,
+      "claims.claimCorrectedText": "multicultural education may cause abandonment of original cultural",
+      "claims.claimTarget.text": "multicultural education",
+      "claims.claimSentiment": -1
+   },
+   "179": {
+      "split": "test",
+      "claims.claimId": 123961,
+      "claims.claimCorrectedText": "people can improve their health via exercise",
+      "claims.claimTarget.text": "exercise",
+      "claims.claimSentiment": 1
+   },
+   "397": {
+      "split": "test",
+      "claims.claimId": 66170,
+      "claims.claimCorrectedText": "regulation generally leads to gambling tourism and illegal gambling",
+      "claims.claimTarget.text": "regulation",
+      "claims.claimSentiment": -1
+   },
+   "196": {
+      "split": "test",
+      "claims.claimId": 23725,
+      "claims.claimCorrectedText": "Affirmative action is intended to promote \nequal opportunity",
+      "claims.claimTarget.text": "Affirmative action",
+      "claims.claimSentiment": 1
+   },
+   "873": {
+      "split": "test",
+      "claims.claimId": 199819,
+      "claims.claimCorrectedText": "abortion is morally wrong",
+      "claims.claimTarget.text": "abortion",
+      "claims.claimSentiment": -1
+   },
+   "843": {
+      "split": "test",
+      "claims.claimId": 199279,
+      "claims.claimCorrectedText": "The government should not interfere with a woman’s ability to have an abortion",
+      "claims.claimTarget.text": "a woman’s ability to have an abortion",
+      "claims.claimSentiment": 1
+   },
+   "1379": {
+      "split": "test",
+      "claims.claimId": 338989,
+      "claims.claimCorrectedText": "The possibility of getting shot by an armed victim is a substantial deterrent to crime",
+      "claims.claimTarget.text": "The possibility of getting shot by an armed victim",
+      "claims.claimSentiment": 1
+   },
+   "1824": {
+      "split": "test",
+      "claims.claimId": 514954,
+      "claims.claimCorrectedText": "Adolescents want both to talk to their parents about sex and to have comprehensive in-school sex education",
+      "claims.claimTarget.text": "to talk to their parents about sex and to have comprehensive in-school sex education",
+      "claims.claimSentiment": 1
+   },
+   "840": {
+      "split": "test",
+      "claims.claimId": 199266,
+      "claims.claimCorrectedText": "abortion, and especially late-term abortion, is unjust",
+      "claims.claimTarget.text": "abortion, and especially late-term abortion",
+      "claims.claimSentiment": -1
+   },
+   "1035": {
+      "split": "test",
+      "claims.claimId": 211567,
+      "claims.claimCorrectedText": "religion does more harm than good",
+      "claims.claimTarget.text": "religion",
+      "claims.claimSentiment": -1
+   },
+   "1798": {
+      "split": "test",
+      "claims.claimId": 510603,
+      "claims.claimCorrectedText": "Abstinence only sex education does not decrease rates of unplanned pregnancy",
+      "claims.claimTarget.text": "Abstinence only sex education",
+      "claims.claimSentiment": -1
+   },
+   "962": {
+      "split": "test",
+      "claims.claimId": 200791,
+      "claims.claimCorrectedText": "God and evil are logically incompatible",
+      "claims.claimTarget.text": "None",
+      "claims.claimSentiment": 0
+   },
+   "40": {
+      "split": "test",
+      "claims.claimId": 123230,
+      "claims.claimCorrectedText": "Violent video games - especially first-person shooter games - encourages real-life acts of violence in teenagers",
+      "claims.claimTarget.text": "Violent video games",
+      "claims.claimSentiment": -1
+   },
+   "528": {
+      "split": "test",
+      "claims.claimId": 135374,
+      "claims.claimCorrectedText": "A monarch can act as an effective intermediary between vaious levels of government and political parties",
+      "claims.claimTarget.text": "A monarch",
+      "claims.claimSentiment": 1
+   },
+   "1164": {
+      "split": "test",
+      "claims.claimId": 252914,
+      "claims.claimCorrectedText": "the only way that intellectual property rights can be implemented is by limiting others' physical property rights",
+      "claims.claimTarget.text": "intellectual property rights",
+      "claims.claimSentiment": -1
+   },
+   "825": {
+      "split": "test",
+      "claims.claimId": 207101,
+      "claims.claimCorrectedText": "The freedom of association and the effective recognition of the right to collective bargaining are defined as an essential right of workers",
+      "claims.claimTarget.text": "The freedom of association and the effective recognition of the right to collective bargaining",
+      "claims.claimSentiment": 1
+   },
+   "901": {
+      "split": "test",
+      "claims.claimId": 191508,
+      "claims.claimCorrectedText": "Welfare breeds dependence on government aid",
+      "claims.claimTarget.text": "Welfare",
+      "claims.claimSentiment": -1
+   },
+   "1142": {
+      "split": "test",
+      "claims.claimId": 229433,
+      "claims.claimCorrectedText": "when a patent's term has expired, the public record ensures that the patentee's idea is not lost to humanity",
+      "claims.claimTarget.text": "when a patent's term has expired, the public record",
+      "claims.claimSentiment": 1
+   },
+   "237": {
+      "split": "test",
+      "claims.claimId": 153208,
+      "claims.claimCorrectedText": "The selection process should not be based on some arbitrary or irrelevant criterion",
+      "claims.claimTarget.text": "some arbitrary or irrelevant criterion",
+      "claims.claimSentiment": -1
+   },
+   "1238": {
+      "split": "test",
+      "claims.claimId": 266503,
+      "claims.claimCorrectedText": "There is very little emission or pollution produced by a wind farm's operation",
+      "claims.claimTarget.text": "a wind farm's operation",
+      "claims.claimSentiment": 1
+   },
+   "813": {
+      "split": "test",
+      "claims.claimId": 193967,
+      "claims.claimCorrectedText": "Collective bargaining facilitates and encourages the amicable settlements of disputes between employees and their employers",
+      "claims.claimTarget.text": "Collective bargaining",
+      "claims.claimSentiment": 1
+   },
+   "69": {
+      "split": "test",
+      "claims.claimId": 143111,
+      "claims.claimCorrectedText": "Video game content is a form of freedom of expression",
+      "claims.claimTarget.text": "Video game content",
+      "claims.claimSentiment": 1
+   },
+   "908": {
+      "split": "test",
+      "claims.claimId": 192214,
+      "claims.claimCorrectedText": "Subsidies are inefficient",
+      "claims.claimTarget.text": "Subsidies",
+      "claims.claimSentiment": -1
+   },
+   "1447": {
+      "split": "test",
+      "claims.claimId": 368841,
+      "claims.claimCorrectedText": "After completion of the Keystone XL line, oil pipelines to the U.S. may run nearly half-empty",
+      "claims.claimTarget.text": "completion of the Keystone XL line",
+      "claims.claimSentiment": -1
+   },
+   "859": {
+      "split": "test",
+      "claims.claimId": 199762,
+      "claims.claimCorrectedText": "moral right to life of human beings (human organisms) begins at or near conception-fertilization",
+      "claims.claimTarget.text": "None",
+      "claims.claimSentiment": 0
+   },
+   "812": {
+      "split": "test",
+      "claims.claimId": 193966,
+      "claims.claimCorrectedText": "Collective bargaining contributes to the effective conduct of public business",
+      "claims.claimTarget.text": "Collective bargaining",
+      "claims.claimSentiment": 1
+   },
+   "838": {
+      "split": "test",
+      "claims.claimId": 199253,
+      "claims.claimCorrectedText": "abortions should be legal under any circumstances",
+      "claims.claimTarget.text": "abortions",
+      "claims.claimSentiment": 1
+   },
+   "1289": {
+      "split": "test",
+      "claims.claimId": 281448,
+      "claims.claimCorrectedText": "species are irreplaceable components of the global ecosystem",
+      "claims.claimTarget.text": "species",
+      "claims.claimSentiment": 1
+   },
+   "976": {
+      "split": "test",
+      "claims.claimId": 205697,
+      "claims.claimCorrectedText": "The idea of God is the most decisive negation of human liberty",
+      "claims.claimTarget.text": "The idea of God",
+      "claims.claimSentiment": -1
+   },
+   "1776": {
+      "split": "test",
+      "claims.claimId": 510486,
+      "claims.claimCorrectedText": "sexual behavior after puberty is a given, and it is therefore crucial to provide information about the risks and how they can be minimized",
+      "claims.claimTarget.text": "to provide information about the risks and how they can be minimized",
+      "claims.claimSentiment": 1
+   },
+   "400": {
+      "split": "test",
+      "claims.claimId": 66173,
+      "claims.claimCorrectedText": "Betting on team sports has become an important service industry in many countries",
+      "claims.claimTarget.text": "Betting on team sports",
+      "claims.claimSentiment": 1
+   },
+   "1384": {
+      "split": "test",
+      "claims.claimId": 339014,
+      "claims.claimCorrectedText": "Right-to-carry laws serve as a deterrent against crime",
+      "claims.claimTarget.text": "Right-to-carry laws",
+      "claims.claimSentiment": 1
+   },
+   "1305": {
+      "split": "test",
+      "claims.claimId": 295066,
+      "claims.claimCorrectedText": "diverse ecosystems actually resist invasion and disease better than their less diverse equivalents",
+      "claims.claimTarget.text": "diverse ecosystems",
+      "claims.claimSentiment": 1
+   },
+   "1039": {
+      "split": "test",
+      "claims.claimId": 211604,
+      "claims.claimCorrectedText": "religious beliefs and traditions lack scientific or rational foundations",
+      "claims.claimTarget.text": "religious beliefs and traditions",
+      "claims.claimSentiment": -1
+   },
+   "352": {
+      "split": "test",
+      "claims.claimId": 184821,
+      "claims.claimCorrectedText": "Multiculturalism perpetuates conflicts between and within groups",
+      "claims.claimTarget.text": "Multiculturalism",
+      "claims.claimSentiment": -1
+   },
+   "319": {
+      "split": "test",
+      "claims.claimId": 181766,
+      "claims.claimCorrectedText": "cultural diversity may be vital for the long-term survival of humanity",
+      "claims.claimTarget.text": "cultural diversity",
+      "claims.claimSentiment": 1
+   },
+   "1000": {
+      "split": "test",
+      "claims.claimId": 209975,
+      "claims.claimCorrectedText": "nature is all there is",
+      "claims.claimTarget.text": "nature",
+      "claims.claimSentiment": 1
+   },
+   "1266": {
+      "split": "test",
+      "claims.claimId": 284090,
+      "claims.claimCorrectedText": "wind power can help to reduce energy imports",
+      "claims.claimTarget.text": "wind power",
+      "claims.claimSentiment": 1
+   },
+   "87": {
+      "split": "test",
+      "claims.claimId": 5929,
+      "claims.claimCorrectedText": "The one-child limit is too extreme. It violates nature’s law",
+      "claims.claimTarget.text": "The one-child limit",
+      "claims.claimSentiment": -1
+   },
+   "1148": {
+      "split": "test",
+      "claims.claimId": 252864,
+      "claims.claimCorrectedText": "creators will not have sufficient incentive to invent unless they are legally entitled to capture the full social value of their inventions",
+      "claims.claimTarget.text": "legally entitled to capture the full social value of their inventions",
+      "claims.claimSentiment": 1
+   },
+   "1099": {
+      "split": "test",
+      "claims.claimId": 224489,
+      "claims.claimCorrectedText": "some service is better than none at all, bringing citizens in contact with their military",
+      "claims.claimTarget.text": "some service",
+      "claims.claimSentiment": 1
+   },
+   "423": {
+      "split": "test",
+      "claims.claimId": 68074,
+      "claims.claimCorrectedText": "Problem gambling leads to adverse consequences for the gambler, others, or for the community",
+      "claims.claimTarget.text": "Problem gambling",
+      "claims.claimSentiment": -1
+   },
+   "1654": {
+      "split": "test",
+      "claims.claimId": 452064,
+      "claims.claimCorrectedText": "the Israeli blockade of the city had caused the humanitarian situation in Gaza to have reached its worst point since Israel occupied the territory in the 1967 Six-Day War",
+      "claims.claimTarget.text": "the Israeli blockade of the city",
+      "claims.claimSentiment": -1
+   },
+   "140": {
+      "split": "test",
+      "claims.claimId": 12917,
+      "claims.claimCorrectedText": "The use of performance-enhancing drugs is little different from the use of new materials in the construction of suits and sporting equipment, which similarly aid performance and can give competitors an unfair advantage over others",
+      "claims.claimTarget.text": "The use of performance-enhancing drugs",
+      "claims.claimSentiment": 1
+   },
+   "231": {
+      "split": "test",
+      "claims.claimId": 152437,
+      "claims.claimCorrectedText": "Affirmative action policies redress imbalances and promote equality",
+      "claims.claimTarget.text": "Affirmative action policies",
+      "claims.claimSentiment": 1
+   },
+   "275": {
+      "split": "test",
+      "claims.claimId": 183732,
+      "claims.claimCorrectedText": "The identification of oppressed classes is difficult to carry out",
+      "claims.claimTarget.text": "The identification of oppressed classes",
+      "claims.claimSentiment": -1
+   },
+   "1205": {
+      "split": "test",
+      "claims.claimId": 227833,
+      "claims.claimCorrectedText": "predictability of wind plant output remains low",
+      "claims.claimTarget.text": "predictability of wind plant output",
+      "claims.claimSentiment": -1
+   },
+   "1421": {
+      "split": "test",
+      "claims.claimId": 347859,
+      "claims.claimCorrectedText": "efforts to sanction Burma were useless",
+      "claims.claimTarget.text": "efforts to sanction Burma",
+      "claims.claimSentiment": -1
+   },
+   "1354": {
+      "split": "test",
+      "claims.claimId": 333660,
+      "claims.claimCorrectedText": "allowing law-abiding citizens to carry concealed firearms deters crime",
+      "claims.claimTarget.text": "allowing law-abiding citizens to carry concealed firearms",
+      "claims.claimSentiment": 1
+   },
+   "232": {
+      "split": "test",
+      "claims.claimId": 152438,
+      "claims.claimCorrectedText": "Affirmative action policies for specific racial groups guarantee the full and equal enjoyment of human rights and fundamental freedoms",
+      "claims.claimTarget.text": "Affirmative action policies for specific racial groups",
+      "claims.claimSentiment": 1
+   },
+   "918": {
+      "split": "test",
+      "claims.claimId": 198571,
+      "claims.claimCorrectedText": "CCT Programs are efficient tools for reducing poverty and inequality",
+      "claims.claimTarget.text": "CCT Programs",
+      "claims.claimSentiment": 1
+   },
+   "1112": {
+      "split": "test",
+      "claims.claimId": 224603,
+      "claims.claimCorrectedText": "Months or years of service amongst the most fit and capable subtracts from the productivity of the economy",
+      "claims.claimTarget.text": "Months or years of service amongst the most fit and capable",
+      "claims.claimSentiment": -1
+   },
+   "1440": {
+      "split": "test",
+      "claims.claimId": 368832,
+      "claims.claimCorrectedText": "the pipeline could pollute air and water supplies",
+      "claims.claimTarget.text": "the pipeline",
+      "claims.claimSentiment": -1
+   },
+   "14": {
+      "split": "test",
+      "claims.claimId": 2989,
+      "claims.claimCorrectedText": "video game play is part of an adolescent boy's normal social setting",
+      "claims.claimTarget.text": "video game play",
+      "claims.claimSentiment": 1
+   },
+   "1813": {
+      "split": "test",
+      "claims.claimId": 510750,
+      "claims.claimCorrectedText": "abstinence is the only guaranteed way of avoiding unwanted pregnancies and contraction of STDs",
+      "claims.claimTarget.text": "abstinence",
+      "claims.claimSentiment": 1
+   },
+   "55": {
+      "split": "test",
+      "claims.claimId": 136232,
+      "claims.claimCorrectedText": "Some serious psychological problems have been attributed to desensitization to violence in video games",
+      "claims.claimTarget.text": "desensitization to violence in video games",
+      "claims.claimSentiment": -1
+   },
+   "1090": {
+      "split": "test",
+      "claims.claimId": 221766,
+      "claims.claimCorrectedText": "Legislation to impose restrictive photo ID requirements has the potential to block millions of eligible American voters, and thus suppress the right to vote",
+      "claims.claimTarget.text": "Legislation to impose restrictive photo ID requirements",
+      "claims.claimSentiment": -1
+   },
+   "1028": {
+      "split": "test",
+      "claims.claimId": 211543,
+      "claims.claimCorrectedText": "the existence of some or all gods is logically impossible",
+      "claims.claimTarget.text": "the existence of some or all gods",
+      "claims.claimSentiment": -1
+   },
+   "1115": {
+      "split": "test",
+      "claims.claimId": 224606,
+      "claims.claimCorrectedText": "Every soldier conscripted in the army is taken away from his civilian work, and away from contributing to the economy which funds the military",
+      "claims.claimTarget.text": "Every soldier conscripted in the army",
+      "claims.claimSentiment": -1
+   },
+   "1084": {
+      "split": "test",
+      "claims.claimId": 215415,
+      "claims.claimCorrectedText": "Voter identification laws could suppress the turnout by voters",
+      "claims.claimTarget.text": "Voter identification laws",
+      "claims.claimSentiment": -1
+   },
+   "1668": {
+      "split": "test",
+      "claims.claimId": 453191,
+      "claims.claimCorrectedText": "Israel has a right to stop weapons from going into Gaza",
+      "claims.claimTarget.text": "to stop weapons from going into Gaza",
+      "claims.claimSentiment": 1
+   },
+   "1429": {
+      "split": "test",
+      "claims.claimId": 348736,
+      "claims.claimCorrectedText": "since the transition to new government in August 2011, Burma's human rights record has been improving",
+      "claims.claimTarget.text": "Burma's human rights record",
+      "claims.claimSentiment": 1
+   },
+   "966": {
+      "split": "test",
+      "claims.claimId": 201571,
+      "claims.claimCorrectedText": "the most immoral acts in human history were performed by atheists",
+      "claims.claimTarget.text": "atheists",
+      "claims.claimSentiment": -1
+   },
+   "470": {
+      "split": "test",
+      "claims.claimId": 108264,
+      "claims.claimCorrectedText": "refugees have much to bring to the countries in which they are resettled in terms of culture and labor",
+      "claims.claimTarget.text": "refugees",
+      "claims.claimSentiment": 1
+   },
+   "889": {
+      "split": "test",
+      "claims.claimId": 210233,
+      "claims.claimCorrectedText": "for every three multitrack schools, one less school must be built",
+      "claims.claimTarget.text": "multitrack schools",
+      "claims.claimSentiment": 1
+   },
+   "96": {
+      "split": "test",
+      "claims.claimId": 109555,
+      "claims.claimCorrectedText": "Rapid fertility reduction associated with the one-child policy has potentially negative results",
+      "claims.claimTarget.text": "Rapid fertility reduction associated with the one-child policy",
+      "claims.claimSentiment": -1
+   },
+   "415": {
+      "split": "test",
+      "claims.claimId": 66248,
+      "claims.claimCorrectedText": "Addicted gamblers cost companies loss of productivity and profit",
+      "claims.claimTarget.text": "Addicted gamblers",
+      "claims.claimSentiment": -1
+   },
+   "821": {
+      "split": "test",
+      "claims.claimId": 199729,
+      "claims.claimCorrectedText": "there is an inherent right to collective bargaining",
+      "claims.claimTarget.text": "collective bargaining",
+      "claims.claimSentiment": 1
+   },
+   "1293": {
+      "split": "test",
+      "claims.claimId": 283901,
+      "claims.claimCorrectedText": "biological richness is an unmeasurable aesthetic that may be developed into commercial recreational attractions",
+      "claims.claimTarget.text": "biological richness",
+      "claims.claimSentiment": 1
+   },
+   "394": {
+      "split": "test",
+      "claims.claimId": 66167,
+      "claims.claimCorrectedText": "there is no moral impediment to gambling",
+      "claims.claimTarget.text": "gambling",
+      "claims.claimSentiment": 1
+   },
+   "1016": {
+      "split": "test",
+      "claims.claimId": 211531,
+      "claims.claimCorrectedText": "things cannot exist without creators",
+      "claims.claimTarget.text": "creators",
+      "claims.claimSentiment": 1
+   },
+   "1212": {
+      "split": "test",
+      "claims.claimId": 265635,
+      "claims.claimCorrectedText": "Compared to the environmental impact of traditional energy sources, the environmental impact of wind power is relatively minor",
+      "claims.claimTarget.text": "the environmental impact of wind power",
+      "claims.claimSentiment": 1
+   },
+   "1045": {
+      "split": "test",
+      "claims.claimId": 211610,
+      "claims.claimCorrectedText": "religious belief is a delusion",
+      "claims.claimTarget.text": "religious belief",
+      "claims.claimSentiment": -1
+   },
+   "878": {
+      "split": "test",
+      "claims.claimId": 199826,
+      "claims.claimCorrectedText": "having an abortion is equivalent to consciously taking the risk of killing another",
+      "claims.claimTarget.text": "having an abortion",
+      "claims.claimSentiment": -1
+   },
+   "926": {
+      "split": "test",
+      "claims.claimId": 199616,
+      "claims.claimCorrectedText": "the rich have an obligation to assist the poor, thus creating a more financially egalitarian society",
+      "claims.claimTarget.text": "an obligation to assist the poor",
+      "claims.claimSentiment": 1
+   },
+   "422": {
+      "split": "test",
+      "claims.claimId": 68073,
+      "claims.claimCorrectedText": "Pathological gambling is a common disorder that is associated with social costs",
+      "claims.claimTarget.text": "Pathological gambling",
+      "claims.claimSentiment": -1
+   },
+   "257": {
+      "split": "test",
+      "claims.claimId": 154777,
+      "claims.claimCorrectedText": "Affirmative action undermines the achievements of minorities",
+      "claims.claimTarget.text": "Affirmative action",
+      "claims.claimSentiment": -1
+   },
+   "1614": {
+      "split": "test",
+      "claims.claimId": 447307,
+      "claims.claimCorrectedText": "What is going on in Gaza is a humanitarian catastrophe",
+      "claims.claimTarget.text": "What is going on in Gaza",
+      "claims.claimSentiment": -1
+   },
+   "1339": {
+      "split": "test",
+      "claims.claimId": 307291,
+      "claims.claimCorrectedText": "an increase in government spending will lead to inflation",
+      "claims.claimTarget.text": "an increase in government spending",
+      "claims.claimSentiment": -1
+   },
+   "1082": {
+      "split": "test",
+      "claims.claimId": 215412,
+      "claims.claimCorrectedText": "Identification requirements may heighten the opportunities for confusion and voter intimidation",
+      "claims.claimTarget.text": "Identification requirements",
+      "claims.claimSentiment": -1
+   },
+   "999": {
+      "split": "test",
+      "claims.claimId": 209974,
+      "claims.claimCorrectedText": "nothing exists beyond the natural universe",
+      "claims.claimTarget.text": "None",
+      "claims.claimSentiment": 0
+   }
+}
