@@ -11,8 +11,8 @@ from allennlp.data.token_indexers import TokenIndexer, SingleIdTokenIndexer
 logger = logging.getLogger(__name__)
 
 
-@DatasetReader.register("sent_data_reader")
-class SentimentDatasetReader(DatasetReader):
+@DatasetReader.register("sent_data_reader2")
+class SentimentDatasetReader2(DatasetReader):
     """
 
     # Parameters
@@ -39,15 +39,15 @@ class SentimentDatasetReader(DatasetReader):
                 if not line:
                     continue
 
-                sentence, sentiment = line.split('###')
-                instance = self.text_to_instance(sentence, sentiment)
+                sentence, target, sentiment = line.split('###')
+                instance = self.text_to_instance(sentence,target, sentiment)
                 if instance is not None:
                     yield instance
 
-    def text_to_instance(self, sentence: str, sentiment: int = None) -> Optional[Instance]:
+    def text_to_instance(self, sentence: str, target:str, sentiment: int = None) -> Optional[Instance]:
 
-
-        tokens = self._tokenizer.tokenize(sentence)
+        input_sentence = '[CLS] ' + sentence + ' [SEP] ' + target + ' [SEP]'
+        tokens = self._tokenizer.tokenize(input_sentence)
         text_field = TextField(tokens)
         fields: Dict[str, Field] = {"tokens": text_field}
 
