@@ -77,9 +77,11 @@ def get_sentiment_data(obj: Dict, output_dataset: str) -> None:
     for topic in obj:
         split = topic['split']
         for claim in topic['claims']:
-            if claim['Compatible'] == 'no' or claim['claimSentiment'] is None:
+            if claim['Compatible'] == 'no' or claim['claimSentiment'] is None or claim['claimTarget']['text'] is None:
                 continue
-            data[split].append((claim['claimCorrectedText'].strip('\n'), claim['claimSentiment']))
+            data[split].append((claim['claimCorrectedText'].strip('\n'),
+                                claim['claimTarget']['text'].strip('\n'), claim['claimSentiment']))
+
 
     random.seed(5)
     random.shuffle(data['test'])
@@ -90,10 +92,10 @@ def get_sentiment_data(obj: Dict, output_dataset: str) -> None:
     for split, values in data.items():
         out_file = os.path.join(output_dataset, 'sentiment_' + split + '.txt')
         with open(out_file, 'a') as the_file:
-            for (sentence, sentiment) in values:
+            for (sentence, target, sentiment) in values:
                 if sentiment is None or '\n' in sentence:
                     continue
-                line = sentence + '###' + str(sentiment) + '\n'
+                line = sentence + '###' + target + '###' + str(sentiment) + '\n'
                 the_file.write(line)
 
 
