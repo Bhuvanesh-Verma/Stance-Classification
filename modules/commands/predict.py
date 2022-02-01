@@ -22,7 +22,7 @@ from allennlp.predictors.predictor import Predictor, JsonDict
 from allennlp.data import Instance
 
 
-@Subcommand.register("predict-target")
+@Subcommand.register("predict-stance")
 class PredictTarget(Predict):
     @overrides
     def add_subparser(self, parser: argparse._SubParsersAction) -> argparse.ArgumentParser:

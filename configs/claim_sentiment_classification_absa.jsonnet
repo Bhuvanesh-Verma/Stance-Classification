@@ -19,8 +19,8 @@
       },
       },
     },
-  "train_data_path": 'Data/sentiment_train.txt@train',
-  "validation_data_path": 'Data/sentiment_val.txt@val',
+  "train_data_path": '_@train',
+  "validation_data_path": '_@val',
   "model": {
    "type": "bert_for_classification",
     "dropout": 0.5,

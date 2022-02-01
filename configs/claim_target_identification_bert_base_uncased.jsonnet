@@ -20,8 +20,8 @@
       },
       },
     },
-  "train_data_path": 'Data/train.txt@train',
-  "validation_data_path": 'Data/val.txt@val',
+  "train_data_path": '_@train',
+  "validation_data_path": '_@val',
   "model": {
     "type": "crf_tagger",
     "label_encoding": "BIOUL",

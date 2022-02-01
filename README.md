@@ -79,3 +79,33 @@ experiment/sentiment/absa
 Data/sentiment_test.txt
 ```
 
+### Prediction
+
+
+1. Claim Target Identification
+```
+allennlp \
+predict-stance
+--cuda-device 0 \
+--batch-size 8 \
+--output-file experiment/prediction/target/prediction.txt \
+--use-dataset-reader \
+--silent \
+experiment/target/bert_base_uncased \
+_@test
+```
+
+2. Claim Sentiment Classification
+
+```
+allennlp \
+predict-stance
+--cuda-device 0 \
+--batch-size 8 \
+--output-file experiment/prediction/sentiment/prediction.txt \
+--use-dataset-reader \
+--silent \
+experiment/sentiment/absa \
+_@test
+```
+
