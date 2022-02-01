@@ -4,7 +4,8 @@
   local transformer_max_length = 512,
   local transformer_hidden_size = 768,
   "dataset_reader": {
-    "type": "sent_data_reader2",
+    "type": "stance_data_reader",
+    "task": 2,
     "tokenizer": {
     "type": "pretrained_transformer",
     "model_name": transformer_model,
@@ -18,8 +19,8 @@
       },
       },
     },
-  "train_data_path": 'Data/sentiment_train.txt',
-  "validation_data_path": 'Data/sentiment_val.txt',
+  "train_data_path": 'Data/sentiment_train.txt@train',
+  "validation_data_path": 'Data/sentiment_val.txt@val',
   "model": {
    "type": "bert_for_classification",
     "dropout": 0.5,
