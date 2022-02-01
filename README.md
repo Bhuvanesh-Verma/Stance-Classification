@@ -28,9 +28,54 @@ e.g:
 Input (Claim Sentence): "violent video games can increase children's aggression"  
 Output (Target): "violent video games"
 ```
-python main.py \
-train \
--s experiments \
--f configs/claim_target_identification.jsonnet
+allennlp \
+train
+-s experiment/target/bert_base_uncased \
+-f configs/claim_target_identification_bert_base_uncased.jsonnet
 
 ```
+
+Task 2 : Claim Sentiment Classification
+In this task, for a given claim we try to find sentiment 
+of claim statement towards claim target.
+
+e.g: Input  
+(Claim Sentence): "violent video games can increase 
+children's aggression", (Claim target): "violent 
+video games"  
+Output (Sentiment): 1 (positive sentiment)
+
+```
+allennlp \
+train
+-s experiment/sentiment/absa \
+-f configs/claim_sentiment_classification_absa2.jsonnet
+
+```
+
+### Evaluation
+
+Accuracy of models can be evaluated using following 
+commands:
+
+1. Claim Target Identification
+```
+allennlp \
+evaluate
+--cuda-device 0 \
+--batch-size 8 \
+experiment/target/bert_base_uncased \
+Data/claim_target_test.txt
+```
+
+2. Claim Sentiment Classification
+
+```
+allennlp \
+evaluate
+--cuda-device 0 \
+--batch-size 8 \
+experiment/sentiment/absa
+Data/sentiment_test.txt
+```
+
