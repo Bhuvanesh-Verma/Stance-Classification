@@ -46,8 +46,8 @@ Output (Sentiment): 1 (positive sentiment)
 ```
 allennlp \
 train
--s experiment/sentiment/absa \
--f configs/claim_sentiment_classification_absa2.jsonnet
+-s experiment/train/sentiment/absa \
+-f configs/claim_sentiment_classification_absa.jsonnet
 
 ```
 
@@ -62,7 +62,7 @@ allennlp \
 evaluate
 --cuda-device 0 \
 --batch-size 8 \
-experiment/target/bert_base_uncased \
+experiment/train/target/bert_base_uncased \
 _@test
 ```
 
@@ -73,8 +73,8 @@ allennlp \
 evaluate
 --cuda-device 0 \
 --batch-size 8 \
-experiment/sentiment/absa
-Data/sentiment_test.txt
+experiment/train/sentiment/absa
+_@test
 ```
 
 ### Prediction
@@ -103,7 +103,7 @@ predict-stance
 --output-file experiment/prediction/sentiment/prediction.txt \
 --use-dataset-reader \
 --silent \
-experiment/sentiment/absa \
+experiment/train/sentiment/absa \
 _@test
 ```
 

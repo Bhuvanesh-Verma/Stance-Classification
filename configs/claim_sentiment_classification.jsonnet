@@ -1,10 +1,11 @@
 
 {
-  local transformer_model = "distilbert-base-uncased-finetuned-sst-2-english",
+  local transformer_model = "activebus/BERT-XD_Review",
   local transformer_max_length = 512,
   local transformer_hidden_size = 768,
   "dataset_reader": {
-    "type": "sent_data_reader",
+    "type": "stance_data_reader",
+    "task": 2,
     "tokenizer": {
     "type": "pretrained_transformer",
     "model_name": transformer_model,
@@ -18,10 +19,10 @@
       },
       },
     },
-  "train_data_path": 'Data/sentiment_train.txt',
-  "validation_data_path": 'Data/sentiment_val.txt',
+  "train_data_path": '_@train',
+  "validation_data_path": '_@val',
   "model": {
-    "type": "basic_classifier",
+   "type": "bert_for_classification",
     "dropout": 0.5,
     "text_field_embedder": {
       "token_embedders": {
@@ -33,28 +34,21 @@
         },
        },
     },
-    "seq2vec_encoder": {
-        "type": "lstm",
-        "input_size": transformer_hidden_size,
-        "hidden_size": 300,
-        "num_layers": 2,
-        "dropout": 0.4394,
-        "bidirectional": true
-    },
+
   },
   "data_loader": {
     "shuffle": true,
-    "batch_size": 8
+    "batch_size": 32
   },
   "trainer": {
     "optimizer": {
-        "type": "adam",
-        "lr": 0.00001,
+        "type": "adamw",
+        "lr": 3e-5,
     },
     "validation_metric": "+accuracy",
-    "num_epochs": 10,
+    "num_epochs": 5,
     "grad_norm": 7.0,
-    "patience": 5,
+    "patience": 3,
 "callbacks": [
         {
         "type": "custom_wandb",
