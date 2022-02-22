@@ -8,19 +8,17 @@ We use dataset created by Bar-Heim et al. 2017 for same task. This dataset
 can be found [here](https://research.ibm.com/haifa/dept/vst/files/IBM_Debater_(R)_CS_EACL-2017.v1.zip).
 ## Usage
 
-### Data Preprocessing
-We use [SequenceTaggingDatasetReader](https://docs.allennlp.org/main/api/data/dataset_readers/sequence_tagging/)
-provided by [AllenNLP](https://allennlp.org) to read data but this dataset reader 
-requires data to be in certain format. So we preprocess data 
-before feeding it to Dataset reader.  Execute following command 
-once 
+### Getting Started
+
+For successful replication of this project we have listed packages that is required to
+run our code in `requirements.txt`. Execute following command to get started
 ```
 python install -r requirements.txt
-python create_dataset.py --output_dataset Data
 ``` 
-This will install required packages and create two files `train.txt` and `test.txt` in Data directory.  
 
-
+### Data Preprocessing
+We create our own dataset reader which is initially inspired from [SequenceTaggingDatasetReader](https://docs.allennlp.org/main/api/data/dataset_readers/sequence_tagging/)
+provided by [AllenNLP](https://allennlp.org). Data is preprocessed within this dataset reader.
 
 ### Training
 Task 1 : Extracting Target phrase from Claim Sentence  
@@ -30,7 +28,7 @@ Output (Target): "violent video games"
 ```
 allennlp \
 train
--s experiment/target/bert_base_uncased \
+-s experiment/train/target/bert_base_uncased \
 -f configs/claim_target_identification_bert_base_uncased.jsonnet
 
 ```
@@ -65,7 +63,7 @@ evaluate
 --cuda-device 0 \
 --batch-size 8 \
 experiment/target/bert_base_uncased \
-Data/claim_target_test.txt
+_@test
 ```
 
 2. Claim Sentiment Classification
@@ -91,7 +89,7 @@ predict-stance
 --output-file experiment/prediction/target/prediction.txt \
 --use-dataset-reader \
 --silent \
-experiment/target/bert_base_uncased \
+experiment/train/target/bert_base_uncased \
 _@test
 ```
 
