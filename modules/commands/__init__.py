@@ -1,0 +1,1 @@
+from modules.commands.predict import PredictTarget

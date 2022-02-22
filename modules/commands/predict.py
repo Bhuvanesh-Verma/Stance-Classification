@@ -126,7 +126,7 @@ class _PredictManager:
                 print(f"input {index}: ", model_input)
             print("prediction: ", prediction)
         if self._output_file is not None:
-            prediction = prediction.strip('\n').strip('"') + '###' + '1'+'\n'
+            prediction = prediction.strip('\n').strip('"') + '###' + sentiment+'\n'
             self._output_file.write(prediction)
 
     def _get_json_data(self) -> Iterator[JsonDict]:
