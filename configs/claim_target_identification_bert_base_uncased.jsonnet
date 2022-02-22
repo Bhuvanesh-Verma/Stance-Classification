@@ -59,7 +59,7 @@
         "lr": 0.0001
     },
     "validation_metric": "+accuracy",
-    "num_epochs": 30,
+    "num_epochs": 5,
     "grad_norm": 7.85,
     "patience": 4,
 "callbacks": [
