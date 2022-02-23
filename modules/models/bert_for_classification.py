@@ -51,7 +51,7 @@ class BertForClassification(Model):
     def forward(  # type: ignore
         self,
         tokens: TextFieldTensors,
-        sentiment: torch.IntTensor = None,
+        labels: torch.IntTensor = None,
         metadata: MetadataField = None,
     ) -> Dict[str, torch.Tensor]:
 
@@ -80,7 +80,7 @@ class BertForClassification(Model):
         attention_mask=tokens['tokens']['mask'],
         token_type_ids=tokens['tokens']['type_ids'],
         position_ids=tokens['tokens']['segment_concat_mask'].int(),
-        labels = sentiment)
+        labels = labels)
 
         logits = results.logits
         probs = torch.nn.functional.softmax(logits, dim=-1)
@@ -88,11 +88,11 @@ class BertForClassification(Model):
 
         output_dict = {"logits": logits, "probs": probs}
         output_dict["token_ids"] = util.get_token_ids_from_text_field_tensors(tokens)
-        if sentiment is not None:
+        if labels is not None:
             #loss = results.loss
-            loss = self._loss(logits, sentiment.long().view(-1))
+            loss = self._loss(logits, labels.long().view(-1))
             output_dict["loss"] = loss
-            self._accuracy(logits, sentiment)
+            self._accuracy(logits, labels)
         return output_dict
 
 
