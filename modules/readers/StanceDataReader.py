@@ -72,34 +72,54 @@ class StanceDataReader(DatasetReader):
             for k, v in data.items():
                 true_val = v['true']
                 pred_val = v['predictions']
-                yield self.text_to_instance(claim_text=true_val['claimText'],
-                                            claim_target=pred_val['predictedTarget'] if 'predictedTarget' in
-                                                                                        pred_val else true_val[
-                                                'claimTarget'],
-                                            claim_sentiment=pred_val['predictedSentiment'] if 'predictedSentiment' in
-                                                                                              pred_val else str(
-                                                true_val['claimSentiment']),
-                                            relation=str(true_val['relation']),
-                                            topic_text=true_val['topicText'],
-                                            topic_target=true_val['topicTarget'],
-                                            topic_sentiment=str(true_val['topicSentiment']))
+                metadata = true_val
+                if true_val['topic']:
+
+                    if self._task == 2 and pred_val['predictedTarget'] is not None:
+                        metadata.update({'predictedTopicTarget':pred_val['predictedTarget']})
+                        yield self.text_to_instance(sentences=(true_val['topicText'], pred_val['predictedTarget']),
+                                                    label=str(true_val['topicSentiment']), metadata=metadata)
+                    elif self._task == 3 and pred_val['predictedSentiment'] is not None:
+                        metadata.update({'predictedTopicSentiment': pred_val['predictedSentiment']})
+                else:
+                    if self._task == 2 and pred_val['predictedTarget'] is not None:
+                        metadata.update({'predictedClaimTarget':pred_val['predictedTarget']})
+                        yield self.text_to_instance(sentences=(true_val['claimCorrectedText'], pred_val['predictedTarget']),
+                                                    label=str(true_val['claimSentiment']), metadata=metadata)
+                    elif self._task == 3 and pred_val['predictedSentiment'] is not None:
+                        metadata.update({'predictedClaimSentiment': pred_val['predictedSentiment']})
+                        yield self.text_to_instance(sentences=(true_val['topicTarget'], true_val['predictedClaimTarget']),
+                                                    label=str(true_val['targetsRelation']), metadata=metadata)
         else:
             data = self.get_dataset()
-            data = self.get_tags(data)
             claims = data[split]['claims']
             topics = data[split]['topics']
             random.seed(5)
             random.shuffle(claims)
             for claim in self.shard_iterable(claims):
-                if 'tags' in claim:
-                    yield self.text_to_instance(claim_text=claim['claimCorrectedText'],
-                                                claim_target=claim['claimTarget'],
-                                                tags=claim['tags'],
-                                                claim_sentiment=str(claim['claimSentiment']),
-                                                relation=str(claim['targetsRelation']),
-                                                topic_text=topics[claim['topic_id']]['topicText'],
-                                                topic_target=topics[claim['topic_id']]['topicTarget'],
-                                                topic_sentiment=str(topics[claim['topic_id']]['topicSentiment']))
+                metadata = claim
+                metadata.update(topics[claim['topic_id']])
+                metadata.update({'topic':False})
+                if self._task == 1 and claim['c_tags'] is not None:
+                    yield self.text_to_instance(sentences=(claim['claimCorrectedText'],claim['claimTarget']),
+                                                label=claim['c_tags'], metadata=metadata)
+                elif self._task == 2 and claim['claimSentiment'] is not None:
+                    yield self.text_to_instance(sentences=(claim['claimCorrectedText'], claim['claimTarget']),
+                                                label=str(claim['claimSentiment']), metadata=metadata)
+                elif self._task == 3 and claim['targetsRelation'] is not None:
+                    yield self.text_to_instance(sentences=(topics[claim['topic_id']]['topicTarget'], claim['claimTarget']),
+                                                label=str(claim['targetsRelation']), metadata=metadata)
+
+            for id,topic in self.shard_iterable(topics.items()):
+                metadata = topic
+                metadata.update({'topic_id':id,'topic':True})
+                if self._task == 1 and topic['t_tags'] is not None:
+                    yield self.text_to_instance(sentences=(topic['topicText'],topic['topicTarget']),
+                                                label=topic['t_tags'], metadata=metadata)
+                elif self._task == 2 and topic['topicSentiment'] is not None:
+                    yield self.text_to_instance(sentences=(topic['topicText'],topic['topicTarget']),
+                                                label=str(topic['topicSentiment']), metadata=metadata)
+
 
     def text_to_instance(  # type: ignore
             self, claim_text: str, claim_target: str = None, tags: List[str] = None, claim_sentiment: str = None,
