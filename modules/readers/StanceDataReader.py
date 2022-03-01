@@ -47,6 +47,7 @@ class StanceDataReader(DatasetReader):
             token_indexers: Dict[str, TokenIndexer] = None,
             tokenizer: Optional[Tokenizer] = None,
             task: int = 1,
+            val: bool = True,
             **kwargs,
     ) -> None:
         super().__init__(
@@ -57,6 +58,7 @@ class StanceDataReader(DatasetReader):
         self._token_delimiter = token_delimiter
         self._tokenizer = tokenizer
         self._task = task
+        self.val = val
 
     @overrides
     def _read(self, file_path):
@@ -191,7 +193,7 @@ class StanceDataReader(DatasetReader):
                 if claim['Compatible'] == 'no' or claim['claimSentiment'] is None or claim['claimTarget'][
                     'text'] is None:
                     continue
-                if split == 'test' and i % 4 == 0:
+                if split == 'test' and i % 4 == 0 and self.val:
                     data['val']['claims'].append({'claimTarget': self.remove_punctuation(claim['claimTarget']['text']),
                                                   'targetsRelation': claim['targetsRelation'],
                                                   'claimSentiment': claim['claimSentiment'],
