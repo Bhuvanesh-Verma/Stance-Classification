@@ -122,39 +122,27 @@ class StanceDataReader(DatasetReader):
 
 
     def text_to_instance(  # type: ignore
-            self, claim_text: str, claim_target: str = None, tags: List[str] = None, claim_sentiment: str = None,
-            relation: str = None, topic_text: str = None, topic_target: str = None,
-            topic_sentiment: str = None,
+            self, sentences: Tuple[str,str], label, metadata
     ) -> Instance:
         """
         We take `pre-tokenized` input here, because we don't have a tokenizer in this class.
         """
 
         fields: Dict[str, Field] = {}
-        claim_text_tokens = [Token(word) for word in claim_text.split()]
-        claim_text_target_tokens = self._tokenizer.tokenize('[CLS] ' + claim_text + ' [SEP] ' + claim_target + ' [SEP]')
-        claim_target_topic_target_tokens = self._tokenizer.tokenize('[CLS] ' + topic_target + ' [SEP] ' + claim_target
-                                                                    + ' [SEP]')
-
         if self._task == 1:
-            fields['tokens'] = TextField(claim_text_tokens)
-            fields['tags'] = SequenceLabelField(tags, TextField(claim_text_tokens)) if tags is not None else None
-            words = [x.text for x in claim_text_tokens]
-        elif self._task == 2:
-            fields['tokens'] = TextField(claim_text_target_tokens)
-            fields['labels'] = LabelField(claim_sentiment)
-            words = [x.text for x in claim_text_target_tokens]
-        elif self._task == 3:
-            fields['tokens'] = TextField(claim_target_topic_target_tokens)
-            fields['labels'] = LabelField(relation)
-            words = [x.text for x in claim_target_topic_target_tokens]
+            tokens = [Token(word) for word in sentences[0].split()]
+            fields['tokens'] = TextField(tokens)
+            fields['tags'] = SequenceLabelField(label, fields['tokens']) if label is not None else None
+        elif self._task == 2 or self._task == 3:
+            tokens = self._tokenizer.tokenize('[CLS] ' + sentences[0] + ' [SEP] ' + sentences[1] + ' [SEP]')
+            fields['tokens'] = TextField(tokens)
+            fields['labels'] = LabelField(label)
         else:
             logger.log(level=20, msg="Incorrect task id. Available task ids are 1, 2 and 3.")
             exit(0)
-        fields['metadata'] = MetadataField({"claimText": claim_text, "claimTarget": claim_target, "relation": relation,
-                                            "claimSentiment": claim_sentiment, "topicText": topic_text,
-                                            "topicTarget": topic_target, "topicSentiment": topic_sentiment,
-                                            "words": words})
+
+        metadata.update({'words': [x.text for x in tokens]})
+        fields['metadata'] = MetadataField(metadata)
         return Instance(fields)
 
     @overrides
@@ -243,24 +231,3 @@ class StanceDataReader(DatasetReader):
         data = self.get_tags(data)
 
         return data
-
-
-''' for topic in obj:
-            split = topic['split']
-            if self._task == 3:
-                if 'topicTarget' in topic:
-                    for claim in topic['claims']:
-                        if claim['Compatible'] == 'no' or claim['claimSentiment'] is None or claim['claimTarget'][
-                            'text'] is None:
-                            continue
-                        data[split].append((topic['topicTarget'], claim['claimTarget']['text'],
-                                            claim['targetsRelation']))
-            else:
-                if 'topicTarget' in topic:
-                    data[split].append((topic['topicText'], topic['topicTarget'], topic['topicSentiment']))
-                for claim in topic['claims']:
-                    if claim['Compatible'] == 'no' or claim['claimSentiment'] is None or claim['claimTarget'][
-                        'text'] is None:
-                        continue
-                    data[split].append((claim['claimCorrectedText'], claim['claimTarget']['text'],
-                                        claim['claimSentiment']))'''
