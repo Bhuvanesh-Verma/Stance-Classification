@@ -4,7 +4,7 @@ import random
 import string
 from collections import defaultdict
 from io import BytesIO
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 from urllib.request import urlopen
 from zipfile import ZipFile
 
@@ -47,6 +47,7 @@ class StanceDataReader(DatasetReader):
             token_indexers: Dict[str, TokenIndexer] = None,
             tokenizer: Optional[Tokenizer] = None,
             task: int = 1,
+            val: bool = True,
             **kwargs,
     ) -> None:
         super().__init__(
@@ -57,6 +58,7 @@ class StanceDataReader(DatasetReader):
         self._token_delimiter = token_delimiter
         self._tokenizer = tokenizer
         self._task = task
+        self.val = val
 
     @overrides
     def _read(self, file_path):
@@ -70,69 +72,77 @@ class StanceDataReader(DatasetReader):
             for k, v in data.items():
                 true_val = v['true']
                 pred_val = v['predictions']
-                yield self.text_to_instance(claim_text=true_val['claimText'],
-                                            claim_target=pred_val['predictedTarget'] if 'predictedTarget' in
-                                                                                        pred_val else true_val[
-                                                'claimTarget'],
-                                            claim_sentiment=pred_val['predictedSentiment'] if 'predictedSentiment' in
-                                                                                              pred_val else str(
-                                                true_val['claimSentiment']),
-                                            relation=str(true_val['relation']),
-                                            topic_text=true_val['topicText'],
-                                            topic_target=true_val['topicTarget'],
-                                            topic_sentiment=str(true_val['topicSentiment']))
+                metadata = true_val
+                if true_val['topic']:
+
+                    if self._task == 2 and pred_val['predictedTarget'] is not None:
+                        metadata.update({'predictedTopicTarget':pred_val['predictedTarget']})
+                        yield self.text_to_instance(sentences=(true_val['topicText'], pred_val['predictedTarget']),
+                                                    label=str(true_val['topicSentiment']), metadata=metadata)
+                    elif self._task == 3 and pred_val['predictedSentiment'] is not None:
+                        metadata.update({'predictedTopicSentiment': pred_val['predictedSentiment']})
+                else:
+                    if self._task == 2 and pred_val['predictedTarget'] is not None:
+                        metadata.update({'predictedClaimTarget':pred_val['predictedTarget']})
+                        yield self.text_to_instance(sentences=(true_val['claimCorrectedText'], pred_val['predictedTarget']),
+                                                    label=str(true_val['claimSentiment']), metadata=metadata)
+                    elif self._task == 3 and pred_val['predictedSentiment'] is not None:
+                        metadata.update({'predictedClaimSentiment': pred_val['predictedSentiment']})
+                        yield self.text_to_instance(sentences=(true_val['topicTarget'], true_val['predictedClaimTarget']),
+                                                    label=str(true_val['targetsRelation']), metadata=metadata)
         else:
             data = self.get_dataset()
-            data = self.get_tags(data)
             claims = data[split]['claims']
             topics = data[split]['topics']
             random.seed(5)
             random.shuffle(claims)
             for claim in self.shard_iterable(claims):
-                if 'tags' in claim:
-                    yield self.text_to_instance(claim_text=claim['claimCorrectedText'],
-                                                claim_target=claim['claimTarget'],
-                                                tags=claim['tags'],
-                                                claim_sentiment=str(claim['claimSentiment']),
-                                                relation=str(claim['targetsRelation']),
-                                                topic_text=topics[claim['topic_id']]['topicText'],
-                                                topic_target=topics[claim['topic_id']]['topicTarget'],
-                                                topic_sentiment=str(topics[claim['topic_id']]['topicSentiment']))
+                metadata = claim
+                metadata.update(topics[claim['topic_id']])
+                metadata.update({'topic':False})
+                if self._task == 1 and claim['c_tags'] is not None:
+                    yield self.text_to_instance(sentences=(claim['claimCorrectedText'],claim['claimTarget']),
+                                                label=claim['c_tags'], metadata=metadata)
+                elif self._task == 2 and claim['claimSentiment'] is not None:
+                    yield self.text_to_instance(sentences=(claim['claimCorrectedText'], claim['claimTarget']),
+                                                label=str(claim['claimSentiment']), metadata=metadata)
+                elif self._task == 3 and claim['targetsRelation'] is not None:
+                    yield self.text_to_instance(sentences=(topics[claim['topic_id']]['topicTarget'], claim['claimTarget']),
+                                                label=str(claim['targetsRelation']), metadata=metadata)
+
+            for id,topic in self.shard_iterable(topics.items()):
+                metadata = topic
+                metadata.update({'topic_id':id,'topic':True})
+                if self._task == 1 and topic['t_tags'] is not None:
+                    yield self.text_to_instance(sentences=(topic['topicText'],topic['topicTarget']),
+                                                label=topic['t_tags'], metadata=metadata)
+                elif self._task == 2 and topic['topicSentiment'] is not None:
+                    yield self.text_to_instance(sentences=(topic['topicText'],topic['topicTarget']),
+                                                label=str(topic['topicSentiment']), metadata=metadata)
+
 
     def text_to_instance(  # type: ignore
-            self, claim_text: str, claim_target: str = None, tags: List[str] = None, claim_sentiment: str = None,
-            relation: str = None, topic_text: str = None, topic_target: str = None,
-            topic_sentiment: str = None,
+            self, sentences: Tuple[str,str], label, metadata
     ) -> Instance:
         """
         We take `pre-tokenized` input here, because we don't have a tokenizer in this class.
         """
 
         fields: Dict[str, Field] = {}
-        claim_text_tokens = [Token(word) for word in claim_text.split()]
-        claim_text_target_tokens = self._tokenizer.tokenize('[CLS] ' + claim_text + ' [SEP] ' + claim_target + ' [SEP]')
-        claim_target_topic_target_tokens = self._tokenizer.tokenize('[CLS] ' + topic_target + ' [SEP] ' + claim_target
-                                                                    + ' [SEP]')
-
         if self._task == 1:
-            fields['tokens'] = TextField(claim_text_tokens)
-            fields['tags'] = SequenceLabelField(tags, TextField(claim_text_tokens)) if tags is not None else None
-            words = [x.text for x in claim_text_tokens]
-        elif self._task == 2:
-            fields['tokens'] = TextField(claim_text_target_tokens)
-            fields['labels'] = LabelField(claim_sentiment)
-            words = [x.text for x in claim_text_target_tokens]
-        elif self._task == 3:
-            fields['tokens'] = TextField(claim_target_topic_target_tokens)
-            fields['labels'] = LabelField(relation)
-            words = [x.text for x in claim_target_topic_target_tokens]
+            tokens = [Token(word) for word in sentences[0].split()]
+            fields['tokens'] = TextField(tokens)
+            fields['tags'] = SequenceLabelField(label, fields['tokens']) if label is not None else None
+        elif self._task == 2 or self._task == 3:
+            tokens = self._tokenizer.tokenize('[CLS] ' + sentences[0] + ' [SEP] ' + sentences[1] + ' [SEP]')
+            fields['tokens'] = TextField(tokens)
+            fields['labels'] = LabelField(label)
         else:
             logger.log(level=20, msg="Incorrect task id. Available task ids are 1, 2 and 3.")
             exit(0)
-        fields['metadata'] = MetadataField({"claimText": claim_text, "claimTarget": claim_target, "relation": relation,
-                                            "claimSentiment": claim_sentiment, "topicText": topic_text,
-                                            "topicTarget": topic_target, "topicSentiment": topic_sentiment,
-                                            "words": words})
+
+        metadata.update({'words': [x.text for x in tokens]})
+        fields['metadata'] = MetadataField(metadata)
         return Instance(fields)
 
     @overrides
@@ -144,21 +154,30 @@ class StanceDataReader(DatasetReader):
             for index, instance in enumerate(dataset['claims']):
                 sentence = instance['claimCorrectedText']
                 target = instance['claimTarget']
-                tag = torch.zeros(len(sentence.split()))
-                target_len = len(target.split())
-                temp_target = target.replace(' ', '')
-                temp_sentence = sentence.replace(target, temp_target)
-                sent_list = temp_sentence.split()
-                if temp_target in sent_list:
-                    start_index = sent_list.index(temp_target)
-                else:
-                    continue
-                end_index = start_index + target_len
-                for i in range(start_index, end_index):
-                    tag[i] = 1
-                tags = [str(int(t)) for t in tag]
-                data[split]['claims'][index].update({'tags': tags})
+                tags = self.create_tags(sentence=sentence,target=target)
+                data[split]['claims'][index].update({'c_tags': tags})
+            for id, values in dataset['topics'].items():
+                sentence = values['topicText']
+                target = values['topicTarget']
+                tags = self.create_tags(sentence=sentence,target=target)
+                data[split]['topics'][id].update({'t_tags': tags})
         return data
+
+    def create_tags(self, sentence, target):
+        tag = torch.zeros(len(sentence.split()))
+        target_len = len(target.split())
+        temp_target = target.replace(' ', '')
+        temp_sentence = sentence.replace(target, temp_target)
+        sent_list = temp_sentence.split()
+        if temp_target in sent_list:
+            start_index = sent_list.index(temp_target)
+        else:
+            return None
+        end_index = start_index + target_len
+        for i in range(start_index, end_index):
+            tag[i] = 1
+        tags = [str(int(t)) for t in tag]
+        return tags
 
     def remove_punctuation(self, s):
         # Many instances are removed because instance contain '.' or '..' between sentence at random places which is
@@ -191,13 +210,14 @@ class StanceDataReader(DatasetReader):
                 if claim['Compatible'] == 'no' or claim['claimSentiment'] is None or claim['claimTarget'][
                     'text'] is None:
                     continue
-                if split == 'test' and i % 4 == 0:
+                if split == 'test' and i % 4 == 0 and self.val:
                     data['val']['claims'].append({'claimTarget': self.remove_punctuation(claim['claimTarget']['text']),
                                                   'targetsRelation': claim['targetsRelation'],
                                                   'claimSentiment': claim['claimSentiment'],
                                                   'claimCorrectedText': self.remove_punctuation(
                                                       claim['claimCorrectedText']),
-                                                  'topic_id': id}
+                                                  'topic_id': id,
+                                                  'stance':claim['stance']}
                                                  )
                 else:
                     data[split]['claims'].append({'claimTarget': self.remove_punctuation(claim['claimTarget']['text']),
@@ -205,28 +225,9 @@ class StanceDataReader(DatasetReader):
                                                   'claimSentiment': claim['claimSentiment'],
                                                   'claimCorrectedText': self.remove_punctuation(
                                                       claim['claimCorrectedText']),
-                                                  'topic_id': id}
+                                                  'topic_id': id,
+                                                  'stance':claim['stance']}
                                                  )
+        data = self.get_tags(data)
 
         return data
-
-
-''' for topic in obj:
-            split = topic['split']
-            if self._task == 3:
-                if 'topicTarget' in topic:
-                    for claim in topic['claims']:
-                        if claim['Compatible'] == 'no' or claim['claimSentiment'] is None or claim['claimTarget'][
-                            'text'] is None:
-                            continue
-                        data[split].append((topic['topicTarget'], claim['claimTarget']['text'],
-                                            claim['targetsRelation']))
-            else:
-                if 'topicTarget' in topic:
-                    data[split].append((topic['topicText'], topic['topicTarget'], topic['topicSentiment']))
-                for claim in topic['claims']:
-                    if claim['Compatible'] == 'no' or claim['claimSentiment'] is None or claim['claimTarget'][
-                        'text'] is None:
-                        continue
-                    data[split].append((claim['claimCorrectedText'], claim['claimTarget']['text'],
-                                        claim['claimSentiment']))'''

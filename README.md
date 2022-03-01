@@ -107,3 +107,17 @@ experiment/train/sentiment/absa \
 _@test
 ```
 
+### Stance Classification
+This will calculate the accuracy of our stance classification model. It requires 
+two prediction files. First we predict the claim targets and then using the predicted 
+claim target, we predict sentiment towards target (review_prediction_from_pred.txt)
+finally, we used the predicted target to predict relation
+(prediction_from_review_pred.txt) with topic target.
+
+```
+python stance_classifier.py \
+--pred_rel_file \
+experiment/prediction/contrast/prediction_from_review_pred.txt \
+--pred_sent_file \
+experiment/prediction/sentiment/review_prediction_from_pred.txt
+```
