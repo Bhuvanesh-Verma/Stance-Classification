@@ -4,7 +4,7 @@ import random
 import string
 from collections import defaultdict
 from io import BytesIO
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 from urllib.request import urlopen
 from zipfile import ZipFile
 
@@ -146,21 +146,30 @@ class StanceDataReader(DatasetReader):
             for index, instance in enumerate(dataset['claims']):
                 sentence = instance['claimCorrectedText']
                 target = instance['claimTarget']
-                tag = torch.zeros(len(sentence.split()))
-                target_len = len(target.split())
-                temp_target = target.replace(' ', '')
-                temp_sentence = sentence.replace(target, temp_target)
-                sent_list = temp_sentence.split()
-                if temp_target in sent_list:
-                    start_index = sent_list.index(temp_target)
-                else:
-                    continue
-                end_index = start_index + target_len
-                for i in range(start_index, end_index):
-                    tag[i] = 1
-                tags = [str(int(t)) for t in tag]
-                data[split]['claims'][index].update({'tags': tags})
+                tags = self.create_tags(sentence=sentence,target=target)
+                data[split]['claims'][index].update({'c_tags': tags})
+            for id, values in dataset['topics'].items():
+                sentence = values['topicText']
+                target = values['topicTarget']
+                tags = self.create_tags(sentence=sentence,target=target)
+                data[split]['topics'][id].update({'t_tags': tags})
         return data
+
+    def create_tags(self, sentence, target):
+        tag = torch.zeros(len(sentence.split()))
+        target_len = len(target.split())
+        temp_target = target.replace(' ', '')
+        temp_sentence = sentence.replace(target, temp_target)
+        sent_list = temp_sentence.split()
+        if temp_target in sent_list:
+            start_index = sent_list.index(temp_target)
+        else:
+            return None
+        end_index = start_index + target_len
+        for i in range(start_index, end_index):
+            tag[i] = 1
+        tags = [str(int(t)) for t in tag]
+        return tags
 
     def remove_punctuation(self, s):
         # Many instances are removed because instance contain '.' or '..' between sentence at random places which is
@@ -211,6 +220,7 @@ class StanceDataReader(DatasetReader):
                                                   'topic_id': id,
                                                   'stance':claim['stance']}
                                                  )
+        data = self.get_tags(data)
 
         return data
 
