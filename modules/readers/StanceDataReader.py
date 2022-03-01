@@ -199,7 +199,8 @@ class StanceDataReader(DatasetReader):
                                                   'claimSentiment': claim['claimSentiment'],
                                                   'claimCorrectedText': self.remove_punctuation(
                                                       claim['claimCorrectedText']),
-                                                  'topic_id': id}
+                                                  'topic_id': id,
+                                                  'stance':claim['stance']}
                                                  )
                 else:
                     data[split]['claims'].append({'claimTarget': self.remove_punctuation(claim['claimTarget']['text']),
@@ -207,7 +208,8 @@ class StanceDataReader(DatasetReader):
                                                   'claimSentiment': claim['claimSentiment'],
                                                   'claimCorrectedText': self.remove_punctuation(
                                                       claim['claimCorrectedText']),
-                                                  'topic_id': id}
+                                                  'topic_id': id,
+                                                  'stance':claim['stance']}
                                                  )
 
         return data
