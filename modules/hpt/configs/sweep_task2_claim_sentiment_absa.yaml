@@ -6,11 +6,9 @@ command:
   - ${program}
   - "train"
   - "-f"
-  - "configs/claim_sentiment_classification_absa2.jsonnet"
+  - "configs/claim_sentiment_classification_absa.jsonnet"
   - "-s"
-  - "experiment/sentiment/hpt_trial/absa2"
-  - "--include-package"
-  - "modules"
+  - "experiment/hpt/task2/absa"
   - ${args}
 
 metric:
@@ -30,3 +28,7 @@ parameters:
   trainer.num_epochs:
     min: 1
     max: 10
+  model.dropout:
+    distribution: uniform
+    min: 0.1
+    max: 0.6
