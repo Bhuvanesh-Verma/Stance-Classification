@@ -30,18 +30,28 @@ if __name__ == "__main__":
     rel_data = get_predictions(args.pred_rel_file)
     sent_data = get_predictions(args.pred_sent_file)
     topics = {}
-    correct = 0
-    for k, v in sent_data.items():
-        if v['true']['topic']:
-            topics[v['true']['topic_id']] = v['true']['topicSentiment']
+    correct_pro = 0
+    correct_con = 0
+    total_pro = 0
+    total_con = 0
     for k, v in rel_data.items():
         if not v['true']['topic']:
-            claim_sentiment = int(v['true']['predictedClaimSentiment'])
-            target_sentiment = int(topics[v['true']['topic_id']])
+            claim_sentiment = int(sent_data[k]['predictions']['predictedSentiment'])
+            target_sentiment = int(v['true']['topicSentiment'])
             relation = int(v['predictions']['predictedRelation'])
             stance = claim_sentiment * target_sentiment * relation
 
-            if (stance == 1 and v['true']['stance'] == 'PRO') or (stance == -1 and v['true']['stance'] == 'CON'):
-                correct += 1
+            if v['true']['stance'] == 'PRO':
+                total_pro += 1
+                if stance == 1:
+                    correct_pro += 1
+            if v['true']['stance'] == 'CON':
+                total_con += 1
+                if stance == -1:
+                    correct_con += 1
     total = len(rel_data.keys())
-    print(f'Accuracy: {correct*100/total}')
+    pro_accuracy = correct_pro/total_pro
+    con_accuracy = correct_con/total_con
+    print(f'Pro Accuracy:{pro_accuracy} ')
+    print(f'Con Accuracy:{con_accuracy} ')
+    print(f'macro averaged Accuracy: {(pro_accuracy*0.5 + con_accuracy*0.5)*100}')
