@@ -135,6 +135,9 @@ class StanceDataReader(DatasetReader):
             fields['tags'] = SequenceLabelField(label, fields['tokens']) if label is not None else None
         elif self._task == 2 or self._task == 3:
             tokens = self._tokenizer.tokenize('[CLS] ' + sentences[0] + ' [SEP] ' + sentences[1] + ' [SEP]')
+            s = [x.text for x in tokens].index('[SEP]')
+            for i in range(s,len(tokens)):
+                tokens[i].type_id=1
             fields['tokens'] = TextField(tokens)
             fields['labels'] = LabelField(label)
         else:
