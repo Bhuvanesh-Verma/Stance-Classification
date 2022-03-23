@@ -5,7 +5,13 @@
   //local transformer_max_length = 128,
   local transformer_hidden_size = 1024,
   "dataset_reader": {
-    "type": "sequence_tagging",
+    "type": "stance_data_reader",
+    "task":1,
+    "tokenizer": {
+    "type": "pretrained_transformer",
+    "model_name": transformer_model,
+    "add_special_tokens": false
+  },
     "token_indexers": {
       "tokens": {
         "type": "pretrained_transformer",
@@ -14,8 +20,8 @@
       },
       },
     },
-  "train_data_path": 'Data/train.txt',
-  "test_data_path": 'Data/val.txt',
+  "train_data_path": '_@train',
+  "validation_data_path": '_@val',
   "model": {
     "type": "crf_tagger",
     "label_encoding": "BIOUL",
@@ -53,7 +59,7 @@
         "lr": 0.0001
     },
     "validation_metric": "+accuracy",
-    "num_epochs": 30,
+    "num_epochs": 5,
     "grad_norm": 7.85,
     "patience": 4,
 "callbacks": [
