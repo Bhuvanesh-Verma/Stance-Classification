@@ -32,14 +32,17 @@ train
 -f configs/claim_target_identification_bert_base_uncased.jsonnet
 
 ```
-
-Task 2 : Claim Sentiment Classification
+Plots from model training and hyper parameter training can be 
+found [here](experiment/train/target).
+<hr>
+Task 2 : Claim Sentiment Classification  
 In this task, for a given claim we try to find sentiment 
 of claim statement towards claim target.
 
 e.g: Input  
 (Claim Sentence): "violent video games can increase 
-children's aggression", (Claim target): "violent 
+children's aggression"  
+(Claim target): "violent 
 video games"  
 Output (Sentiment): 1 (positive sentiment)
 
@@ -50,6 +53,29 @@ train
 -f configs/claim_sentiment_classification_absa.jsonnet
 
 ```
+Plots for task 2 training can be found [here](experiment/train/sentiment).
+<hr>
+Task 3 : Contrast Classification (Semantic Similarity Classification)  
+In this task, relation between topic and claim target is
+classified. Originally, task is to classify 
+targets as consistent or contrastive. We tried to find 
+semantic similarity between targets instead.
+
+e.g: Input  
+(Topic Target): "the sale of violent video games to minors",  
+(Claim target): "violent 
+video games"  
+Output (relation or similarity): 1 (similar or consistent)
+
+```
+allennlp \
+train
+-s experiment/train/contrast/bilstm \
+-f configs/contrast_classification_bilstm.jsonnet
+
+```
+Plots for task 3 training can be found [here](experiment/train/contrast).
+
 
 ### Evaluation
 
@@ -65,6 +91,20 @@ evaluate
 experiment/train/target/bert_base_uncased \
 _@test
 ```
+`experiment/train/target/bert_base_uncased` is path to trained model.   
+We can also evaluate model by using full test data by setting
+`val` flag off in dataset reader. We override config value
+of `val` flag in command below to achieve this.
+
+```
+allennlp \
+evaluate
+--cuda-device 0 \
+--batch-size 8 \
+experiment/train/target/bert_base_uncased \
+_@test \
+-o "{\"dataset_reader.val\":false}"
+```
 
 2. Claim Sentiment Classification
 
@@ -73,9 +113,26 @@ allennlp \
 evaluate
 --cuda-device 0 \
 --batch-size 8 \
-experiment/train/sentiment/absa
+experiment/train/sentiment/lpt \
 _@test
 ```
+To evaluate using predicted target replace _@test with 
+PATH_TO_TASK1_PREDICTION@pred. We provide prediction files
+from our trained model (see below in Prediction).
+
+3. Contrast Classification or Semantic Similarity Classification
+
+```
+allennlp \
+evaluate
+--cuda-device 0 \
+--batch-size 32 \
+experiment/train/contrast/bilstm \
+_@test
+```
+To evaluate using predicted target replace _@test with 
+PATH_TO_TASK2_PREDICTION@pred. Prediction of task 2 contains
+predicted tags from task1. 
 
 ### Prediction
 
@@ -93,22 +150,71 @@ experiment/train/target/bert_base_uncased \
 _@test
 ```
 
+Prediction from our best model for task 1 can be found [here](experiment/prediction/target/prediction.txt).
 2. Claim Sentiment Classification
 
+Prediction from gold targets
 ```
 allennlp \
 predict-stance
 --cuda-device 0 \
 --batch-size 8 \
---output-file experiment/prediction/sentiment/prediction.txt \
+--output-file experiment/prediction/sentiment/lpt_prediction.txt \
 --use-dataset-reader \
 --silent \
-experiment/train/sentiment/absa \
+experiment/train/sentiment/lpt \
 _@test
 ```
+Prediction from our best model for task 2 on gold targets can be found [here](experiment/prediction/sentiment/lpt_prediction.txt).
+
+Prediction from predicted targets
+```
+allennlp \
+predict-stance
+--cuda-device 0 \
+--batch-size 8 \
+--output-file experiment/prediction/sentiment/lpt_prediction_from_pred.txt \
+--use-dataset-reader \
+--silent \
+experiment/train/sentiment/lpt \
+experiment/prediction/target/prediction.txt@pred
+```
+Prediction for task 2 on predicted targets can be found [here](experiment/prediction/sentiment/lpt_prediction_from_pred.txt).
+
+3. Contrast Classification or Semantic Similarity Classification
+
+Prediction from gold targets
+```
+allennlp \
+predict-stance
+--cuda-device 0 \
+--batch-size 32 \
+--output-file experiment/prediction/contrast/prediction.txt \
+--use-dataset-reader \
+--silent \
+experiment/train/contrast/bilstm \
+_@test \
+```
+Prediction from our best model for task 3 on gold targets can be found [here](experiment/prediction/contrast/prediction.txt).
+
+Prediction from predicted targets
+
+```
+allennlp \
+predict-stance
+--cuda-device 0 \
+--batch-size 32 \
+--output-file experiment/prediction/contrast/prediction_from_pred.txt \
+--use-dataset-reader \
+--silent \
+experiment/train/contrast/bilstm \
+experiment/prediction/sentiment/lpt_prediction_from_pred.txt@pred \
+```
+Prediction for task 3 on predicted targets can be found [here](experiment/prediction/contrast/prediction_from_pred.txt).
+
 
 ### Stance Classification
-This will calculate the accuracy of our stance classification model. It requires 
+This will calculate the macro averaged accuracy of our stance classification model. It requires 
 two prediction files. First we predict the claim targets and then using the predicted 
 claim target, we predict sentiment towards target (review_prediction_from_pred.txt)
 finally, we used the predicted target to predict relation
@@ -121,3 +227,21 @@ experiment/prediction/contrast/prediction_from_review_pred.txt \
 --pred_sent_file \
 experiment/prediction/sentiment/review_prediction_from_pred.txt
 ```
+
+### Project IBM Debater
+
+We tested our model against Pro/Con stance classification
+model of Project IBM debater. Their model can predict Pro,
+Con and neutral in range -1 to 1, however there is no specific 
+boundary provided. We choose three different thresholds to test their model.
+`Threshold=0.33` means that if model output is greater than 0.33 then its 
+`Pro` and if it is less than -0.33 then `Con`.
+
+
+| Threshold | Pro Accuracy | Con Accuracy | Macro Averaged Accuracy |
+|-----------|--------------|--------------|-------------------------|
+| 0.33      | 73.87        | 66.5         | 70.19                   |
+| 0.5       | 70.42        | 63.59        | 67.01                   |
+| 0         | 81.53        | 73.79        | 77.66                   |
+
+#TODO DOCUMENT CODE
