@@ -223,9 +223,9 @@ finally, we used the predicted target to predict relation
 ```
 python stance_classifier.py \
 --pred_rel_file \
-experiment/prediction/contrast/prediction_from_review_pred.txt \
+experiment/prediction/contrast/prediction_from_pred.txt \
 --pred_sent_file \
-experiment/prediction/sentiment/review_prediction_from_pred.txt
+experiment/prediction/sentiment/lpt_prediction_from_pred.txt.txt
 ```
 
 ### Project IBM Debater
