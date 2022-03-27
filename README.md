@@ -215,18 +215,39 @@ Prediction for task 3 on predicted targets can be found [here](experiment/predic
 
 ### Stance Classification
 This will calculate the macro averaged accuracy of our stance classification model. It requires 
-two prediction files. First we predict the claim targets and then using the predicted 
-claim target, we predict sentiment towards target (review_prediction_from_pred.txt)
-finally, we used the predicted target to predict relation
-(prediction_from_review_pred.txt) with topic target.
+prediction files from task 2 and task 3.
+
+We test our model in two ways.
+1. Gold Targets  
+First we predict [sentiment towards target](experiment/prediction/sentiment/lpt_prediction.txt)
+using `gold` targets. Then we predict [relation](experiment/prediction/contrast/prediction.txt) between topic 
+and claim targets using `gold` targets. Finally, we use these to prediction files to evaluate our model.
+
+```
+python stance_classifier.py \
+--pred_rel_file \
+experiment/prediction/contrast/prediction.txt \
+--pred_sent_file \
+experiment/prediction/sentiment/lpt_prediction.txt
+```
+
+2. Predicted Targets
+First we predict the [claim targets](experiment/prediction/target/prediction.txt) and then using the predicted 
+claim target, we predict [sentiment towards predicted target](experiment/prediction/sentiment/lpt_prediction_from_pred.txt)
+and then we used the predicted target to [predict relation](experiment/prediction/contrast/prediction_from_pred.txt).
+These prediction files are used to evaluate model.
 
 ```
 python stance_classifier.py \
 --pred_rel_file \
 experiment/prediction/contrast/prediction_from_pred.txt \
 --pred_sent_file \
-experiment/prediction/sentiment/lpt_prediction_from_pred.txt.txt
+experiment/prediction/sentiment/lpt_prediction_from_pred.txt
 ```
+| Type              | Pro Accuracy | Con Accuracy | Macro Averaged Accuracy |
+|-------------------|--------------|--------------|-------------------------|
+| Gold Targets      | 70.36        | 71.85        | 71.1                    |
+| Predicted Targets | 70.12        | 70.87        | 70.5                    |
 
 ### Project IBM Debater
 
