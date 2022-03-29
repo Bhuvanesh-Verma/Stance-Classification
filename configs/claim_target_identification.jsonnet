@@ -1,9 +1,13 @@
 
 {
-  local transformer_model = "facebook/bart-base",
+   // Local Variables
+  local transformer_model = "facebook/bart-base", // pre-trained bert model to be used, obtained from huggingface.com
   local transformer_max_length = 1024,
-  //local transformer_max_length = 128,
   local transformer_hidden_size = 768,
+  // Dataset Reader: Here we can define constructor parameters of dataset reader that we are using. "type" key is
+  // important as it decides which dataset reader we are using. You can find "stance_data_reader" defined just above
+  // class definition of StanceDataReader(modules/readers/StanceDataReader.py Line 25). Other keys are constructor
+  // parameters.
   "dataset_reader": {
     "type": "stance_data_reader",
     "task":1,
@@ -20,8 +24,11 @@
       },
       },
     },
-  "train_data_path": '_@train',
+  "train_data_path": '_@train', // We download data directly from web
   "validation_data_path": '_@val',
+  // Model: Here we define which model to use and the constructor parameters of that model. We use "crf_tagger" which is
+  // provided by allennlp (http://docs.allennlp.org/v0.9.0/api/allennlp.models.crf_tagger.html). This model requires an
+  // encoder on top and we use Bi-LSTM.
   "model": {
     "type": "crf_tagger",
     "label_encoding": "BIOUL",
@@ -62,13 +69,13 @@
     "num_epochs": 5,
     "grad_norm": 7.85,
     "patience": 4,
+    // Callback: we use Weights and Bias to log out training. We use custom created W&B callback.
 "callbacks": [
         {
         "type": "custom_wandb",
          'entity': std.extVar('WANDB_ENTITY'),
          'project': std.extVar('WANDB_PROJECT'),
          'files_to_save': ["config.json", "out.log","metrics.json"],
-         //'serialization_dir': 'experiment/wandb'
          },
          ],
   }

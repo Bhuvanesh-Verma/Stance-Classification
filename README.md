@@ -10,15 +10,17 @@ can be found [here](https://research.ibm.com/haifa/dept/vst/files/IBM_Debater_(R
 
 ### Getting Started
 
-For successful replication of this project we have listed packages that is required to
-run our code in `requirements.txt`. Execute following command to get started
+For successful replication of this project we have listed packages that are required to
+run our code in `requirements.txt`. Execute following commands to get started
 ```
-python install -r requirements.txt
+conda create -n testenv python=3.8
+conda activate testenv
+pip install -r requirements.txt
 ``` 
 
 ### Data Preprocessing
 We create our own dataset reader which is initially inspired from [SequenceTaggingDatasetReader](https://docs.allennlp.org/main/api/data/dataset_readers/sequence_tagging/)
-provided by [AllenNLP](https://allennlp.org). Data is preprocessed within this dataset reader.
+provided by [AllenNLP](https://allennlp.org). Data is preprocessed within this [dataset reader](modules/readers/StanceDataReader.py).
 
 ### Training
 Task 1 : Extracting Target phrase from Claim Sentence  
@@ -35,7 +37,8 @@ train
 Plots from model training and hyper parameter training can be 
 found [here](experiment/train/target).
 <hr>
-Task 2 : Claim Sentiment Classification  
+Task 2 : Claim Sentiment Classification
+
 In this task, for a given claim we try to find sentiment 
 of claim statement towards claim target.
 
@@ -56,6 +59,7 @@ train
 Plots for task 2 training can be found [here](experiment/train/sentiment).
 <hr>
 Task 3 : Contrast Classification (Semantic Similarity Classification)  
+
 In this task, relation between topic and claim target is
 classified. Originally, task is to classify 
 targets as consistent or contrastive. We tried to find 
@@ -150,7 +154,8 @@ experiment/train/target/bert_base_uncased \
 _@test
 ```
 
-Prediction from our best model for task 1 can be found [here](experiment/prediction/target/prediction.txt).
+Prediction from our best model for task 1 can be found [here](experiment/prediction/target/prediction.txt). 
+
 2. Claim Sentiment Classification
 
 Prediction from gold targets
@@ -231,10 +236,10 @@ experiment/prediction/contrast/prediction.txt \
 experiment/prediction/sentiment/lpt_prediction.txt
 ```
 
-2. Predicted Targets
+2. Predicted Targets  
 First we predict the [claim targets](experiment/prediction/target/prediction.txt) and then using the predicted 
 claim target, we predict [sentiment towards predicted target](experiment/prediction/sentiment/lpt_prediction_from_pred.txt)
-and then we used the predicted target to [predict relation](experiment/prediction/contrast/prediction_from_pred.txt).
+and then we use the predicted target to [predict relation](experiment/prediction/contrast/prediction_from_pred.txt).
 These prediction files are used to evaluate model.
 
 ```
@@ -253,15 +258,17 @@ experiment/prediction/sentiment/lpt_prediction_from_pred.txt
 
 We tested our model against Pro/Con stance classification
 model of Project IBM debater. Their model can predict Pro,
-Con and neutral in range -1 to 1, however there is no specific 
+Con and neutral for a sentence-topic pair in range -1 to 1, however there is no specific 
 boundary provided. We choose three different thresholds to test their model.
-`Threshold=0.33` means that if model output is greater than 0.33 then its 
-`Pro` and if it is less than -0.33 then `Con`.
+`Threshold=0.33` means that if model output is greater than 0.33 then sentence is 
+labelled as `Pro` and if it is less than -0.33 then `Con`. 
+
 
 
 | Threshold | Pro Accuracy | Con Accuracy | Macro Averaged Accuracy |
 |-----------|--------------|--------------|-------------------------|
+| 0         | 81.53        | 73.79        | 77.66                   |
 | 0.33      | 73.87        | 66.5         | 70.19                   |
 | 0.5       | 70.42        | 63.59        | 67.01                   |
-| 0         | 81.53        | 73.79        | 77.66                   |
+                
 

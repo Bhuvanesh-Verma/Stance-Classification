@@ -1,9 +1,16 @@
 import json
-import sys
 
 import argparse
 
-def get_predictions(pred_file: str):
+from typing import Dict
+
+'''
+In this script we calculate stance classification using the formula derived by Bar-Heim et al. 2017. This script takes
+two arguments, sentiment and relation prediction file. It then use predicted sentiment and relation to calculate stance.
+Finally, it presents accuracy for Pro and Con labels as well as overall macro average accuracy.
+'''
+
+def get_predictions(pred_file: str) -> Dict[str, Dict]:
     with open(pred_file, 'r') as myfile:
         data = myfile.read()
     myfile.close()

@@ -25,8 +25,7 @@ DEFAULT_WORD_TAG_DELIMITER = "###"
 @DatasetReader.register("stance_data_reader")
 class StanceDataReader(DatasetReader):
     """
-
-
+    Generalised Dataset reader for all three sub tasks of Stance classification.
     # Parameters
 
     word_tag_delimiter: `str`, optional (default=`"###"`)
@@ -62,9 +61,14 @@ class StanceDataReader(DatasetReader):
 
     @overrides
     def _read(self, file_path):
-        # if `file_path` is a URL, redirect to the cache
+        """
+        This method downloads dataset, convert it into required format for each subtask.
+        :param file_path: it is usually in the format '_@split' or 'PATH@split'
+        :return: None
+        """
         file_path, split = file_path.split('@')
         if split == 'pred':
+            # This blocked is accessed only during the evaluation and prediction.
             with open(file_path, 'r') as myfile:
                 data = myfile.read()
             myfile.close()
@@ -125,7 +129,9 @@ class StanceDataReader(DatasetReader):
             self, sentences: Tuple[str,str], label, metadata
     ) -> Instance:
         """
-        We take `pre-tokenized` input here, because we don't have a tokenizer in this class.
+        It converts data from text to Instance format. To generalise this method for all tasks, we take sentences which
+        is tuple of strings as in each task we require two sentences as input. It then converts these sentences to
+        required format as per the model used.
         """
 
         fields: Dict[str, Field] = {}
@@ -152,7 +158,12 @@ class StanceDataReader(DatasetReader):
     def apply_token_indexers(self, instance: Instance) -> None:
         instance.fields["tokens"]._token_indexers = self._token_indexers  # type: ignore
 
-    def get_tags(self, data):
+    def get_tags(self, data)->Dict:
+        """
+        This method retrieve binary tags for claim and topic sentence.
+        :param data: dictionary containing data divided by split
+        :return: data containing tags for claims and targets of all splits.
+        """
         for split, dataset in data.items():
             for index, instance in enumerate(dataset['claims']):
                 sentence = instance['claimCorrectedText']
@@ -167,6 +178,13 @@ class StanceDataReader(DatasetReader):
         return data
 
     def create_tags(self, sentence, target):
+        """
+        For a given sentence and target, this method creates a list of 1s and 0s as tags. Portion of the sentence
+        containing target is tagged as 1 and rest with 0.
+        :param sentence: string sentence
+        :param target: string phrase as target
+        :return: list with 1s and 0s representing tags for the sentence
+        """
         tag = torch.zeros(len(sentence.split()))
         target_len = len(target.split())
         temp_target = target.replace(' ', '')
@@ -182,12 +200,18 @@ class StanceDataReader(DatasetReader):
         tags = [str(int(t)) for t in tag]
         return tags
 
-    def remove_punctuation(self, s):
+    def remove_punctuation(self, s)-> str:
         # Many instances are removed because instance contain '.' or '..' between sentence at random places which is
         # difficult to tackle
         return s.translate(str.maketrans('', '', string.punctuation))
 
-    def get_dataset(self):
+    def get_dataset(self)->Dict:
+        """
+        This method downloads IBM_Debater_(R)_CS_EACL-2017 dataset and parse the claim_stance_dataset_v1.json data file.
+        It converts data from data file into a dictionary which contains splits and for each split there are topics and
+         claims. Then for each claim and topic sentence binary tags are created for performing sequence tagging task.
+        :return: dictionary containing data with respect to the splits.
+        """
         logger.log(level=20, msg="Data is being downloaded ...")
         resp = urlopen("https://research.ibm.com/haifa/dept/vst/files/IBM_Debater_(R)_CS_EACL-2017.v1.zip")
         zipfile = ZipFile(BytesIO(resp.read()))
