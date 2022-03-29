@@ -18,11 +18,20 @@ conda activate testenv
 pip install -r requirements.txt
 ``` 
 
+We use AllenNLP framework for whole project. It  provides
+high level abstraction for common components and models used in
+modern NLP. Mainly, it uses configuration files
+which contains constructor parameters for various objects. We provide
+brief description of what these configuration files contains in one of
+our [config file](configs/claim_target_identification.jsonnet).
+More information on AllenNLP can be found [here](https://guide.allennlp.org/overview).
+
 ### Data Preprocessing
 We create our own dataset reader which is initially inspired from [SequenceTaggingDatasetReader](https://docs.allennlp.org/main/api/data/dataset_readers/sequence_tagging/)
-provided by [AllenNLP](https://allennlp.org). Data is preprocessed within this [dataset reader](modules/readers/StanceDataReader.py).
+provided by AllenNLP. Data is preprocessed within this [dataset reader](modules/readers/StanceDataReader.py).
 
 ### Training
+
 Task 1 : Extracting Target phrase from Claim Sentence  
 e.g: 
 Input (Claim Sentence): "violent video games can increase children's aggression"  
